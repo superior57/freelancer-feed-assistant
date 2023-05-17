@@ -1,304 +1,334 @@
 let autoload = true;
 
-$(document).ready(function(){
-  $('.search-result-input-sort').empty();
-  $('.search-result-input-sort').append(`
+$(document).ready(function () {
+  $(".search-result-input-sort").empty();
+  $(".search-result-input-sort").append(`
     <button class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 50px;' id='refresh_btn'>New Feed</button>
   `);
 
-  $('.cdk-overlay-pane').css('left', '20px');
+  $(".cdk-overlay-pane").css("left", "20px");
 
   loop_rand();
 
-  $(document).on('mouseover', '#search-results', function(e){
+  $(document).on("mouseover", "#search-results", function (e) {
     autoload = false;
   });
 
-  $(document).on('mouseleave', '#search-results', function(e){
+  $(document).on("mouseleave", "#search-results", function (e) {
     autoload = true;
   });
 
-  $(document).on('click', '.ButtonElement', function(e){
-    $('.cdk-overlay-pane').css('left', '20px');
+  $(document).on("click", ".ButtonElement", function (e) {
+    $(".cdk-overlay-pane").css("left", "20px");
   });
 
-  $(window).on('scroll', function(e){
-     e.preventDefault();
-    $('.cdk-overlay-pane').hide();
+  $(window).on("scroll", function (e) {
+    e.preventDefault();
+    $(".cdk-overlay-pane").hide();
   });
 
-  
-  
-  $(document).on('click', '.btn-feed-assistant-reload', function(e){
+  $(document).on("click", ".btn-feed-assistant-reload", function (e) {
     e.preventDefault();
     reload_jobs();
   });
 });
 
 const countries = [
-  {"name": "Afghanistan", "code": "AF"}, 
-  {"name": "land Islands", "code": "AX"}, 
-  {"name": "Albania", "code": "AL"}, 
-  {"name": "Algeria", "code": "DZ"}, 
-  {"name": "American Samoa", "code": "AS"}, 
-  {"name": "AndorrA", "code": "AD"}, 
-  {"name": "Angola", "code": "AO"}, 
-  {"name": "Anguilla", "code": "AI"}, 
-  {"name": "Antarctica", "code": "AQ"}, 
-  {"name": "Antigua and Barbuda", "code": "AG"}, 
-  {"name": "Argentina", "code": "AR"}, 
-  {"name": "Armenia", "code": "AM"}, 
-  {"name": "Aruba", "code": "AW"}, 
-  {"name": "Australia", "code": "AU"}, 
-  {"name": "Austria", "code": "AT"}, 
-  {"name": "Azerbaijan", "code": "AZ"}, 
-  {"name": "Bahamas", "code": "BS"}, 
-  {"name": "Bahrain", "code": "BH"}, 
-  {"name": "Bangladesh", "code": "BD"}, 
-  {"name": "Barbados", "code": "BB"}, 
-  {"name": "Belarus", "code": "BY"}, 
-  {"name": "Belgium", "code": "BE"}, 
-  {"name": "Belize", "code": "BZ"}, 
-  {"name": "Benin", "code": "BJ"}, 
-  {"name": "Bermuda", "code": "BM"}, 
-  {"name": "Bhutan", "code": "BT"}, 
-  {"name": "Bolivia", "code": "BO"}, 
-  {"name": "Bosnia and Herzegovina", "code": "BA"}, 
-  {"name": "Botswana", "code": "BW"}, 
-  {"name": "Bouvet Island", "code": "BV"}, 
-  {"name": "Brazil", "code": "BR"}, 
-  {"name": "British Indian Ocean Territory", "code": "IO"}, 
-  {"name": "Brunei Darussalam", "code": "BN"}, 
-  {"name": "Bulgaria", "code": "BG"}, 
-  {"name": "Burkina Faso", "code": "BF"}, 
-  {"name": "Burundi", "code": "BI"}, 
-  {"name": "Cambodia", "code": "KH"}, 
-  {"name": "Cameroon", "code": "CM"}, 
-  {"name": "Canada", "code": "CA"}, 
-  {"name": "Cape Verde", "code": "CV"}, 
-  {"name": "Cayman Islands", "code": "KY"}, 
-  {"name": "Central African Republic", "code": "CF"}, 
-  {"name": "Chad", "code": "TD"}, 
-  {"name": "Chile", "code": "CL"}, 
-  {"name": "China", "code": "CN"}, 
-  {"name": "Christmas Island", "code": "CX"}, 
-  {"name": "Cocos (Keeling) Islands", "code": "CC"}, 
-  {"name": "Colombia", "code": "CO"}, 
-  {"name": "Comoros", "code": "KM"}, 
-  {"name": "Congo", "code": "CG"}, 
-  {"name": "Congo, The Democratic Republic of the", "code": "CD"}, 
-  {"name": "Cook Islands", "code": "CK"}, 
-  {"name": "Costa Rica", "code": "CR"}, 
-  {"name": "Cote D'Ivoire", "code": "CI"}, 
-  {"name": "Croatia", "code": "HR"}, 
-  {"name": "Cuba", "code": "CU"}, 
-  {"name": "Cyprus", "code": "CY"}, 
-  {"name": "Czech Republic", "code": "CZ"}, 
-  {"name": "Denmark", "code": "DK"}, 
-  {"name": "Djibouti", "code": "DJ"}, 
-  {"name": "Dominica", "code": "DM"}, 
-  {"name": "Dominican Republic", "code": "DO"}, 
-  {"name": "Ecuador", "code": "EC"}, 
-  {"name": "Egypt", "code": "EG"}, 
-  {"name": "El Salvador", "code": "SV"}, 
-  {"name": "Equatorial Guinea", "code": "GQ"}, 
-  {"name": "Eritrea", "code": "ER"}, 
-  {"name": "Estonia", "code": "EE"}, 
-  {"name": "Ethiopia", "code": "ET"}, 
-  {"name": "Falkland Islands (Malvinas)", "code": "FK"}, 
-  {"name": "Faroe Islands", "code": "FO"}, 
-  {"name": "Fiji", "code": "FJ"}, 
-  {"name": "Finland", "code": "FI"}, 
-  {"name": "France", "code": "FR"}, 
-  {"name": "French Guiana", "code": "GF"}, 
-  {"name": "French Polynesia", "code": "PF"}, 
-  {"name": "French Southern Territories", "code": "TF"}, 
-  {"name": "Gabon", "code": "GA"}, 
-  {"name": "Gambia", "code": "GM"}, 
-  {"name": "Georgia", "code": "GE"}, 
-  {"name": "Germany", "code": "DE"}, 
-  {"name": "Ghana", "code": "GH"}, 
-  {"name": "Gibraltar", "code": "GI"}, 
-  {"name": "Greece", "code": "GR"}, 
-  {"name": "Greenland", "code": "GL"}, 
-  {"name": "Grenada", "code": "GD"}, 
-  {"name": "Guadeloupe", "code": "GP"}, 
-  {"name": "Guam", "code": "GU"}, 
-  {"name": "Guatemala", "code": "GT"}, 
-  {"name": "Guernsey", "code": "GG"}, 
-  {"name": "Guinea", "code": "GN"}, 
-  {"name": "Guinea-Bissau", "code": "GW"}, 
-  {"name": "Guyana", "code": "GY"}, 
-  {"name": "Haiti", "code": "HT"}, 
-  {"name": "Heard Island and Mcdonald Islands", "code": "HM"}, 
-  {"name": "Holy See (Vatican City State)", "code": "VA"}, 
-  {"name": "Honduras", "code": "HN"}, 
-  {"name": "Hong Kong", "code": "HK"}, 
-  {"name": "Hungary", "code": "HU"}, 
-  {"name": "Iceland", "code": "IS"}, 
-  {"name": "India", "code": "IN"}, 
-  {"name": "Indonesia", "code": "ID"}, 
-  {"name": "Iran, Islamic Republic Of", "code": "IR"}, 
-  {"name": "Iraq", "code": "IQ"}, 
-  {"name": "Ireland", "code": "IE"}, 
-  {"name": "Isle of Man", "code": "IM"}, 
-  {"name": "Israel", "code": "IL"}, 
-  {"name": "Italy", "code": "IT"}, 
-  {"name": "Jamaica", "code": "JM"}, 
-  {"name": "Japan", "code": "JP"}, 
-  {"name": "Jersey", "code": "JE"}, 
-  {"name": "Jordan", "code": "JO"}, 
-  {"name": "Kazakhstan", "code": "KZ"}, 
-  {"name": "Kenya", "code": "KE"}, 
-  {"name": "Kiribati", "code": "KI"}, 
-  {"name": "Korea, Democratic People'S Republic of", "code": "KP"}, 
-  {"name": "Korea, Republic of", "code": "KR"}, 
-  {"name": "Kuwait", "code": "KW"}, 
-  {"name": "Kyrgyzstan", "code": "KG"}, 
-  {"name": "Lao People'S Democratic Republic", "code": "LA"}, 
-  {"name": "Latvia", "code": "LV"}, 
-  {"name": "Lebanon", "code": "LB"}, 
-  {"name": "Lesotho", "code": "LS"}, 
-  {"name": "Liberia", "code": "LR"}, 
-  {"name": "Libyan Arab Jamahiriya", "code": "LY"}, 
-  {"name": "Liechtenstein", "code": "LI"}, 
-  {"name": "Lithuania", "code": "LT"}, 
-  {"name": "Luxembourg", "code": "LU"}, 
-  {"name": "Macao", "code": "MO"}, 
-  {"name": "Macedonia, The Former Yugoslav Republic of", "code": "MK"}, 
-  {"name": "Madagascar", "code": "MG"}, 
-  {"name": "Malawi", "code": "MW"}, 
-  {"name": "Malaysia", "code": "MY"}, 
-  {"name": "Maldives", "code": "MV"}, 
-  {"name": "Mali", "code": "ML"}, 
-  {"name": "Malta", "code": "MT"}, 
-  {"name": "Marshall Islands", "code": "MH"}, 
-  {"name": "Martinique", "code": "MQ"}, 
-  {"name": "Mauritania", "code": "MR"}, 
-  {"name": "Mauritius", "code": "MU"}, 
-  {"name": "Mayotte", "code": "YT"}, 
-  {"name": "Mexico", "code": "MX"}, 
-  {"name": "Micronesia, Federated States of", "code": "FM"}, 
-  {"name": "Moldova, Republic of", "code": "MD"}, 
-  {"name": "Monaco", "code": "MC"}, 
-  {"name": "Mongolia", "code": "MN"}, 
-  {"name": "Montenegro", "code": "ME"},
-  {"name": "Montserrat", "code": "MS"},
-  {"name": "Morocco", "code": "MA"}, 
-  {"name": "Mozambique", "code": "MZ"}, 
-  {"name": "Myanmar", "code": "MM"}, 
-  {"name": "Namibia", "code": "NA"}, 
-  {"name": "Nauru", "code": "NR"}, 
-  {"name": "Nepal", "code": "NP"}, 
-  {"name": "Netherlands", "code": "NL"}, 
-  {"name": "Netherlands Antilles", "code": "AN"}, 
-  {"name": "New Caledonia", "code": "NC"}, 
-  {"name": "New Zealand", "code": "NZ"}, 
-  {"name": "Nicaragua", "code": "NI"}, 
-  {"name": "Niger", "code": "NE"}, 
-  {"name": "Nigeria", "code": "NG"}, 
-  {"name": "Niue", "code": "NU"}, 
-  {"name": "Norfolk Island", "code": "NF"}, 
-  {"name": "Northern Mariana Islands", "code": "MP"}, 
-  {"name": "Norway", "code": "NO"}, 
-  {"name": "Oman", "code": "OM"}, 
-  {"name": "Pakistan", "code": "PK"}, 
-  {"name": "Palau", "code": "PW"}, 
-  {"name": "Palestinian Territory, Occupied", "code": "PS"}, 
-  {"name": "Panama", "code": "PA"}, 
-  {"name": "Papua New Guinea", "code": "PG"}, 
-  {"name": "Paraguay", "code": "PY"}, 
-  {"name": "Peru", "code": "PE"}, 
-  {"name": "Philippines", "code": "PH"}, 
-  {"name": "Pitcairn", "code": "PN"}, 
-  {"name": "Poland", "code": "PL"}, 
-  {"name": "Portugal", "code": "PT"}, 
-  {"name": "Puerto Rico", "code": "PR"}, 
-  {"name": "Qatar", "code": "QA"}, 
-  {"name": "Reunion", "code": "RE"}, 
-  {"name": "Romania", "code": "RO"}, 
-  {"name": "Russian Federation", "code": "RU"}, 
-  {"name": "RWANDA", "code": "RW"}, 
-  {"name": "Saint Helena", "code": "SH"}, 
-  {"name": "Saint Kitts and Nevis", "code": "KN"}, 
-  {"name": "Saint Lucia", "code": "LC"}, 
-  {"name": "Saint Pierre and Miquelon", "code": "PM"}, 
-  {"name": "Saint Vincent and the Grenadines", "code": "VC"}, 
-  {"name": "Samoa", "code": "WS"}, 
-  {"name": "San Marino", "code": "SM"}, 
-  {"name": "Sao Tome and Principe", "code": "ST"}, 
-  {"name": "Saudi Arabia", "code": "SA"}, 
-  {"name": "Senegal", "code": "SN"}, 
-  {"name": "Serbia", "code": "RS"}, 
-  {"name": "Seychelles", "code": "SC"}, 
-  {"name": "Sierra Leone", "code": "SL"}, 
-  {"name": "Singapore", "code": "SG"}, 
-  {"name": "Slovakia", "code": "SK"}, 
-  {"name": "Slovenia", "code": "SI"}, 
-  {"name": "Solomon Islands", "code": "SB"}, 
-  {"name": "Somalia", "code": "SO"}, 
-  {"name": "South Africa", "code": "ZA"}, 
-  {"name": "South Georgia and the South Sandwich Islands", "code": "GS"}, 
-  {"name": "Spain", "code": "ES"}, 
-  {"name": "Sri Lanka", "code": "LK"}, 
-  {"name": "Sudan", "code": "SD"}, 
-  {"name": "Suriname", "code": "SR"}, 
-  {"name": "Svalbard and Jan Mayen", "code": "SJ"}, 
-  {"name": "Swaziland", "code": "SZ"}, 
-  {"name": "Sweden", "code": "SE"}, 
-  {"name": "Switzerland", "code": "CH"}, 
-  {"name": "Syrian Arab Republic", "code": "SY"}, 
-  {"name": "Taiwan, Province of China", "code": "TW"}, 
-  {"name": "Tajikistan", "code": "TJ"}, 
-  {"name": "Tanzania, United Republic of", "code": "TZ"}, 
-  {"name": "Thailand", "code": "TH"}, 
-  {"name": "Timor-Leste", "code": "TL"}, 
-  {"name": "Togo", "code": "TG"}, 
-  {"name": "Tokelau", "code": "TK"}, 
-  {"name": "Tonga", "code": "TO"}, 
-  {"name": "Trinidad and Tobago", "code": "TT"}, 
-  {"name": "Tunisia", "code": "TN"}, 
-  {"name": "Turkey", "code": "TR"}, 
-  {"name": "Turkmenistan", "code": "TM"}, 
-  {"name": "Turks and Caicos Islands", "code": "TC"}, 
-  {"name": "Tuvalu", "code": "TV"}, 
-  {"name": "Uganda", "code": "UG"}, 
-  {"name": "Ukraine", "code": "UA"}, 
-  {"name": "United Arab Emirates", "code": "AE"}, 
-  {"name": "United Kingdom", "code": "GB"}, 
-  {"name": "United States", "code": "US"}, 
-  {"name": "United States Minor Outlying Islands", "code": "UM"}, 
-  {"name": "Uruguay", "code": "UY"}, 
-  {"name": "Uzbekistan", "code": "UZ"}, 
-  {"name": "Vanuatu", "code": "VU"}, 
-  {"name": "Venezuela", "code": "VE"}, 
-  {"name": "Viet Nam", "code": "VN"}, 
-  {"name": "Virgin Islands, British", "code": "VG"}, 
-  {"name": "Virgin Islands, U.S.", "code": "VI"}, 
-  {"name": "Wallis and Futuna", "code": "WF"}, 
-  {"name": "Western Sahara", "code": "EH"}, 
-  {"name": "Yemen", "code": "YE"}, 
-  {"name": "Zambia", "code": "ZM"}, 
-  {"name": "Zimbabwe", "code": "ZW"} 
+  { name: "Afghanistan", code: "AF" },
+  { name: "land Islands", code: "AX" },
+  { name: "Albania", code: "AL" },
+  { name: "Algeria", code: "DZ" },
+  { name: "American Samoa", code: "AS" },
+  { name: "AndorrA", code: "AD" },
+  { name: "Angola", code: "AO" },
+  { name: "Anguilla", code: "AI" },
+  { name: "Antarctica", code: "AQ" },
+  { name: "Antigua and Barbuda", code: "AG" },
+  { name: "Argentina", code: "AR" },
+  { name: "Armenia", code: "AM" },
+  { name: "Aruba", code: "AW" },
+  { name: "Australia", code: "AU" },
+  { name: "Austria", code: "AT" },
+  { name: "Azerbaijan", code: "AZ" },
+  { name: "Bahamas", code: "BS" },
+  { name: "Bahrain", code: "BH" },
+  { name: "Bangladesh", code: "BD" },
+  { name: "Barbados", code: "BB" },
+  { name: "Belarus", code: "BY" },
+  { name: "Belgium", code: "BE" },
+  { name: "Belize", code: "BZ" },
+  { name: "Benin", code: "BJ" },
+  { name: "Bermuda", code: "BM" },
+  { name: "Bhutan", code: "BT" },
+  { name: "Bolivia", code: "BO" },
+  { name: "Bosnia and Herzegovina", code: "BA" },
+  { name: "Botswana", code: "BW" },
+  { name: "Bouvet Island", code: "BV" },
+  { name: "Brazil", code: "BR" },
+  { name: "British Indian Ocean Territory", code: "IO" },
+  { name: "Brunei Darussalam", code: "BN" },
+  { name: "Bulgaria", code: "BG" },
+  { name: "Burkina Faso", code: "BF" },
+  { name: "Burundi", code: "BI" },
+  { name: "Cambodia", code: "KH" },
+  { name: "Cameroon", code: "CM" },
+  { name: "Canada", code: "CA" },
+  { name: "Cape Verde", code: "CV" },
+  { name: "Cayman Islands", code: "KY" },
+  { name: "Central African Republic", code: "CF" },
+  { name: "Chad", code: "TD" },
+  { name: "Chile", code: "CL" },
+  { name: "China", code: "CN" },
+  { name: "Christmas Island", code: "CX" },
+  { name: "Cocos (Keeling) Islands", code: "CC" },
+  { name: "Colombia", code: "CO" },
+  { name: "Comoros", code: "KM" },
+  { name: "Congo", code: "CG" },
+  { name: "Congo, The Democratic Republic of the", code: "CD" },
+  { name: "Cook Islands", code: "CK" },
+  { name: "Costa Rica", code: "CR" },
+  { name: "Cote D'Ivoire", code: "CI" },
+  { name: "Croatia", code: "HR" },
+  { name: "Cuba", code: "CU" },
+  { name: "Cyprus", code: "CY" },
+  { name: "Czech Republic", code: "CZ" },
+  { name: "Denmark", code: "DK" },
+  { name: "Djibouti", code: "DJ" },
+  { name: "Dominica", code: "DM" },
+  { name: "Dominican Republic", code: "DO" },
+  { name: "Ecuador", code: "EC" },
+  { name: "Egypt", code: "EG" },
+  { name: "El Salvador", code: "SV" },
+  { name: "Equatorial Guinea", code: "GQ" },
+  { name: "Eritrea", code: "ER" },
+  { name: "Estonia", code: "EE" },
+  { name: "Ethiopia", code: "ET" },
+  { name: "Falkland Islands (Malvinas)", code: "FK" },
+  { name: "Faroe Islands", code: "FO" },
+  { name: "Fiji", code: "FJ" },
+  { name: "Finland", code: "FI" },
+  { name: "France", code: "FR" },
+  { name: "French Guiana", code: "GF" },
+  { name: "French Polynesia", code: "PF" },
+  { name: "French Southern Territories", code: "TF" },
+  { name: "Gabon", code: "GA" },
+  { name: "Gambia", code: "GM" },
+  { name: "Georgia", code: "GE" },
+  { name: "Germany", code: "DE" },
+  { name: "Ghana", code: "GH" },
+  { name: "Gibraltar", code: "GI" },
+  { name: "Greece", code: "GR" },
+  { name: "Greenland", code: "GL" },
+  { name: "Grenada", code: "GD" },
+  { name: "Guadeloupe", code: "GP" },
+  { name: "Guam", code: "GU" },
+  { name: "Guatemala", code: "GT" },
+  { name: "Guernsey", code: "GG" },
+  { name: "Guinea", code: "GN" },
+  { name: "Guinea-Bissau", code: "GW" },
+  { name: "Guyana", code: "GY" },
+  { name: "Haiti", code: "HT" },
+  { name: "Heard Island and Mcdonald Islands", code: "HM" },
+  { name: "Holy See (Vatican City State)", code: "VA" },
+  { name: "Honduras", code: "HN" },
+  { name: "Hong Kong", code: "HK" },
+  { name: "Hungary", code: "HU" },
+  { name: "Iceland", code: "IS" },
+  { name: "India", code: "IN" },
+  { name: "Indonesia", code: "ID" },
+  { name: "Iran, Islamic Republic Of", code: "IR" },
+  { name: "Iraq", code: "IQ" },
+  { name: "Ireland", code: "IE" },
+  { name: "Isle of Man", code: "IM" },
+  { name: "Israel", code: "IL" },
+  { name: "Italy", code: "IT" },
+  { name: "Jamaica", code: "JM" },
+  { name: "Japan", code: "JP" },
+  { name: "Jersey", code: "JE" },
+  { name: "Jordan", code: "JO" },
+  { name: "Kazakhstan", code: "KZ" },
+  { name: "Kenya", code: "KE" },
+  { name: "Kiribati", code: "KI" },
+  { name: "Korea, Democratic People'S Republic of", code: "KP" },
+  { name: "Korea, Republic of", code: "KR" },
+  { name: "Kuwait", code: "KW" },
+  { name: "Kyrgyzstan", code: "KG" },
+  { name: "Lao People'S Democratic Republic", code: "LA" },
+  { name: "Latvia", code: "LV" },
+  { name: "Lebanon", code: "LB" },
+  { name: "Lesotho", code: "LS" },
+  { name: "Liberia", code: "LR" },
+  { name: "Libyan Arab Jamahiriya", code: "LY" },
+  { name: "Liechtenstein", code: "LI" },
+  { name: "Lithuania", code: "LT" },
+  { name: "Luxembourg", code: "LU" },
+  { name: "Macao", code: "MO" },
+  { name: "Macedonia, The Former Yugoslav Republic of", code: "MK" },
+  { name: "Madagascar", code: "MG" },
+  { name: "Malawi", code: "MW" },
+  { name: "Malaysia", code: "MY" },
+  { name: "Maldives", code: "MV" },
+  { name: "Mali", code: "ML" },
+  { name: "Malta", code: "MT" },
+  { name: "Marshall Islands", code: "MH" },
+  { name: "Martinique", code: "MQ" },
+  { name: "Mauritania", code: "MR" },
+  { name: "Mauritius", code: "MU" },
+  { name: "Mayotte", code: "YT" },
+  { name: "Mexico", code: "MX" },
+  { name: "Micronesia, Federated States of", code: "FM" },
+  { name: "Moldova, Republic of", code: "MD" },
+  { name: "Monaco", code: "MC" },
+  { name: "Mongolia", code: "MN" },
+  { name: "Montenegro", code: "ME" },
+  { name: "Montserrat", code: "MS" },
+  { name: "Morocco", code: "MA" },
+  { name: "Mozambique", code: "MZ" },
+  { name: "Myanmar", code: "MM" },
+  { name: "Namibia", code: "NA" },
+  { name: "Nauru", code: "NR" },
+  { name: "Nepal", code: "NP" },
+  { name: "Netherlands", code: "NL" },
+  { name: "Netherlands Antilles", code: "AN" },
+  { name: "New Caledonia", code: "NC" },
+  { name: "New Zealand", code: "NZ" },
+  { name: "Nicaragua", code: "NI" },
+  { name: "Niger", code: "NE" },
+  { name: "Nigeria", code: "NG" },
+  { name: "Niue", code: "NU" },
+  { name: "Norfolk Island", code: "NF" },
+  { name: "Northern Mariana Islands", code: "MP" },
+  { name: "Norway", code: "NO" },
+  { name: "Oman", code: "OM" },
+  { name: "Pakistan", code: "PK" },
+  { name: "Palau", code: "PW" },
+  { name: "Palestinian Territory, Occupied", code: "PS" },
+  { name: "Panama", code: "PA" },
+  { name: "Papua New Guinea", code: "PG" },
+  { name: "Paraguay", code: "PY" },
+  { name: "Peru", code: "PE" },
+  { name: "Philippines", code: "PH" },
+  { name: "Pitcairn", code: "PN" },
+  { name: "Poland", code: "PL" },
+  { name: "Portugal", code: "PT" },
+  { name: "Puerto Rico", code: "PR" },
+  { name: "Qatar", code: "QA" },
+  { name: "Reunion", code: "RE" },
+  { name: "Romania", code: "RO" },
+  { name: "Russian Federation", code: "RU" },
+  { name: "RWANDA", code: "RW" },
+  { name: "Saint Helena", code: "SH" },
+  { name: "Saint Kitts and Nevis", code: "KN" },
+  { name: "Saint Lucia", code: "LC" },
+  { name: "Saint Pierre and Miquelon", code: "PM" },
+  { name: "Saint Vincent and the Grenadines", code: "VC" },
+  { name: "Samoa", code: "WS" },
+  { name: "San Marino", code: "SM" },
+  { name: "Sao Tome and Principe", code: "ST" },
+  { name: "Saudi Arabia", code: "SA" },
+  { name: "Senegal", code: "SN" },
+  { name: "Serbia", code: "RS" },
+  { name: "Seychelles", code: "SC" },
+  { name: "Sierra Leone", code: "SL" },
+  { name: "Singapore", code: "SG" },
+  { name: "Slovakia", code: "SK" },
+  { name: "Slovenia", code: "SI" },
+  { name: "Solomon Islands", code: "SB" },
+  { name: "Somalia", code: "SO" },
+  { name: "South Africa", code: "ZA" },
+  { name: "South Georgia and the South Sandwich Islands", code: "GS" },
+  { name: "Spain", code: "ES" },
+  { name: "Sri Lanka", code: "LK" },
+  { name: "Sudan", code: "SD" },
+  { name: "Suriname", code: "SR" },
+  { name: "Svalbard and Jan Mayen", code: "SJ" },
+  { name: "Swaziland", code: "SZ" },
+  { name: "Sweden", code: "SE" },
+  { name: "Switzerland", code: "CH" },
+  { name: "Syrian Arab Republic", code: "SY" },
+  { name: "Taiwan, Province of China", code: "TW" },
+  { name: "Tajikistan", code: "TJ" },
+  { name: "Tanzania, United Republic of", code: "TZ" },
+  { name: "Thailand", code: "TH" },
+  { name: "Timor-Leste", code: "TL" },
+  { name: "Togo", code: "TG" },
+  { name: "Tokelau", code: "TK" },
+  { name: "Tonga", code: "TO" },
+  { name: "Trinidad and Tobago", code: "TT" },
+  { name: "Tunisia", code: "TN" },
+  { name: "Turkey", code: "TR" },
+  { name: "Turkmenistan", code: "TM" },
+  { name: "Turks and Caicos Islands", code: "TC" },
+  { name: "Tuvalu", code: "TV" },
+  { name: "Uganda", code: "UG" },
+  { name: "Ukraine", code: "UA" },
+  { name: "United Arab Emirates", code: "AE" },
+  { name: "United Kingdom", code: "GB" },
+  { name: "United States", code: "US" },
+  { name: "United States Minor Outlying Islands", code: "UM" },
+  { name: "Uruguay", code: "UY" },
+  { name: "Uzbekistan", code: "UZ" },
+  { name: "Vanuatu", code: "VU" },
+  { name: "Venezuela", code: "VE" },
+  { name: "Viet Nam", code: "VN" },
+  { name: "Virgin Islands, British", code: "VG" },
+  { name: "Virgin Islands, U.S.", code: "VI" },
+  { name: "Wallis and Futuna", code: "WF" },
+  { name: "Western Sahara", code: "EH" },
+  { name: "Yemen", code: "YE" },
+  { name: "Zambia", code: "ZM" },
+  { name: "Zimbabwe", code: "ZW" },
 ];
 
-const reload_jobs = function(){
-  axios.get('https://www.freelancer.com/api/projects/0.1/projects/active/?compact=true&enterprise_metadata_field_details=true&forceShowLocationDetails=false&full_description=true&job_details=true&jobs%5B%5D=3&jobs%5B%5D=9&jobs%5B%5D=13&jobs%5B%5D=17&jobs%5B%5D=20&jobs%5B%5D=51&jobs%5B%5D=69&jobs%5B%5D=77&jobs%5B%5D=95&jobs%5B%5D=116&jobs%5B%5D=137&jobs%5B%5D=237&jobs%5B%5D=247&jobs%5B%5D=305&jobs%5B%5D=323&jobs%5B%5D=335&jobs%5B%5D=343&jobs%5B%5D=355&jobs%5B%5D=500&jobs%5B%5D=519&jobs%5B%5D=539&jobs%5B%5D=564&jobs%5B%5D=602&jobs%5B%5D=669&jobs%5B%5D=704&jobs%5B%5D=741&jobs%5B%5D=759&jobs%5B%5D=763&jobs%5B%5D=901&jobs%5B%5D=1031&jobs%5B%5D=1051&jobs%5B%5D=1084&jobs%5B%5D=1088&jobs%5B%5D=1092&jobs%5B%5D=1093&jobs%5B%5D=1126&jobs%5B%5D=1325&jobs%5B%5D=1544&jobs%5B%5D=1623&jobs%5B%5D=1684&keywords=&languages%5B%5D=de&languages%5B%5D=en&languages%5B%5D=es&languages%5B%5D=fr&languages%5B%5D=it&languages%5B%5D=pl&languages%5B%5D=pt&languages%5B%5D=ru&languages%5B%5D=tr&limit=10&new_pools=true&offset=0&project_types%5B%5D=fixed&project_types%5B%5D=hourly&query=&sort_field=submitdate&upgrade_details=true&user_details=true&user_employer_reputation=true&user_status=true')
-  .then(function(res){
-    const data = res.data.result;
-    const users = data.users;
-    const projects = data.projects.map(function(el){
-      return {
-        ...el,
-        owner_info: users[el.owner_id]
-      };
-    });
-    
-    const container = $('.search-result-list').empty();
-    const newContent = projects.map(function(el){
-      return `
+const remove_countries_code = ["IN", "NG"];
+
+const reload_jobs = function () {
+  axios
+    .get("https://www.freelancer.com/api/projects/0.1/projects/active/", {
+      params: {
+        compact: true,
+        enterprise_metadata_field_details: true,
+        forceShowLocationDetails: false,
+        full_description: true,
+        jobs: [
+          3, 9, 13, 17, 20, 51, 69, 77, 95, 116, 137, 237, 247, 305, 323, 335,
+          343, 355, 500, 519, 539, 564, 602, 669, 704, 741, 759, 763, 901, 1031,
+          1051, 1084, 1088, 1092, 1093, 1126, 1325, 1544, 1623, 1684,
+        ],
+        languages: ["de", "en", "es", "fr", "it", "pl", "pt", "ru", "tr"],
+        limit: 10,
+        new_pools: true,
+        offset: 0,
+        project_types: ["fixed", "hourly"],
+        sort_field: "submitdate",
+        upgrade_details: true,
+        user_details: true,
+        user_employer_reputation: true,
+        user_status: true,
+        job_details: true,
+        countries: countries
+          .filter((item) => !remove_countries_code.includes(item.code))
+          .map((item) => item.code),
+      },
+    })
+    .then(function (res) {
+      const data = res.data.result;
+      const users = data.users;
+      const projects = data.projects.map(function (el) {
+        return {
+          ...el,
+          owner_info: users[el.owner_id],
+        };
+      });
+
+      const container = $(".search-result-list").empty();
+      const newContent = projects
+        .map(function (el) {
+          return `
       <li ng-repeat="project in search.results.projects">
-        <a class="search-result-link" href="/projects/${el.seo_url}" target="_blank">
+        <a class="search-result-link" href="/projects/${
+          el.seo_url
+        }" target="_blank">
           <div class="search-result-item">
             <fl-project-tile project="project" user="search.user" tracking-event-section="search.trackingEventSection"
               display-location="search.searchType === 'projects'" last-tracking-event="search.lastTrackingEvent"
@@ -306,8 +336,8 @@ const reload_jobs = function(){
               <figure class="info-card-iconBox">
                 <span class="Icon">
                   <fl-icon name="ui-fixed-project">
-                    ${(function(){
-                      if(el.type === 'fixed'){
+                    ${(function () {
+                      if (el.type === "fixed") {
                         return `
                           <svg class="Icon-image" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 15.5v1c0 1.103.897 2 2 2h9v2H7v2h10v-2h-4v-2h9c1.103 0 2-.897 2-2v-1H0zm24-1v-11c0-1.103-.897-2-2-2H2c-1.103 0-2 .897-2 2v11h24z" fill="#0087E0"></path></svg>
                         `;
@@ -353,9 +383,15 @@ const reload_jobs = function(){
                     </span>
                   </div>
                   <div class="info-card-details info-card-details--hasTooltip info-card-grid-item">
-                    <img src="https://www.f-cdn.com/assets/main/en/assets/flags/${countries.find(function(country){
-                      return country.name === el.owner_info.location.country.name;
-                    }).code.toLowerCase()}.svg" title="${el.owner_info.location.country.name}" class="fh-flag-image" width="20" style="margin-right: 8px;">
+                    <img src="https://www.f-cdn.com/assets/main/en/assets/flags/${countries
+                      .find(function (country) {
+                        return (
+                          country.name === el.owner_info.location.country.name
+                        );
+                      })
+                      .code.toLowerCase()}.svg" title="${
+            el.owner_info.location.country.name
+          }" class="fh-flag-image" width="20" style="margin-right: 8px;">
                     <span class="Icon Icon--small info-card--iconSpace" title="Contest owner"
                       i18n-title-id="d4a1ba56edb003f1e379139218be68e7" i18n-title-msg="Contest owner" i18n-id="">
                       <fl-icon name="ui-user-non-verified">
@@ -367,19 +403,38 @@ const reload_jobs = function(){
                         </svg></fl-icon>
                     </span>
                     <span>
-                      ${(function(){
-                        if(el.owner_info.employer_reputation.entire_history.reviews > 0){
-                          let score = (Math.round(el.owner_info.employer_reputation.entire_history.overall * 10) / 10).toString();
-                          if(score.length === 1) score = `${score}.0`;
+                      ${(function () {
+                        if (
+                          el.owner_info.employer_reputation.entire_history
+                            .reviews > 0
+                        ) {
+                          let score = (
+                            Math.round(
+                              el.owner_info.employer_reputation.entire_history
+                                .overall * 10
+                            ) / 10
+                          ).toString();
+                          if (score.length === 1) score = `${score}.0`;
 
                           return `
-                            <span class="Tooltip Tooltip--bottom" data-tooltip="${el.owner_info.employer_reputation.entire_history.complete} jobs completed">
+                            <span class="Tooltip Tooltip--bottom" data-tooltip="${
+                              el.owner_info.employer_reputation.entire_history
+                                .complete
+                            } jobs completed">
                               <div class="Rating Rating--labeled info-card-rating" data-star_rating="${score}">
                                 <span class="Rating-total">
                                   <span class="Rating-progress"></span>
                                 </span>
                               </div>
-                              (${Math.round(el.owner_info.employer_reputation.earnings_score * 10) / 10} spent / ${el.owner_info.employer_reputation.entire_history.reviews} reviews)
+                              (${
+                                Math.round(
+                                  el.owner_info.employer_reputation
+                                    .earnings_score * 10
+                                ) / 10
+                              } spent / ${
+                            el.owner_info.employer_reputation.entire_history
+                              .reviews
+                          } reviews)
                             </span>
                           `;
                         }
@@ -397,18 +452,26 @@ const reload_jobs = function(){
                         style="
                           width:16px;
                           height:16px;
-                          fill: ${el.owner_info.status.payment_verified ? '#30B478' : '#ccc'}
+                          fill: ${
+                            el.owner_info.status.payment_verified
+                              ? "#30B478"
+                              : "#ccc"
+                          }
                         "
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 236.988 236.988" xml:space="preserve"><polygon points="198.098,24.326 87.543,134.881 38.891,86.229 0,125.121 87.543,212.662 236.988,63.217 "/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
                     </fl-icon>
                     <span style="margin-left: 5px;">
-                      ${el.owner_info.status.payment_verified ? 'Payment verified' : 'Payment not verified'}
+                      ${
+                        el.owner_info.status.payment_verified
+                          ? "Payment verified"
+                          : "Payment not verified"
+                      }
                     </span>
                   </div>
                   <div class="info-card-details info-card-grid-item" style="display: inline-block;">
                     <fl-icon name="ui-tag">
-                      ${(function(){
-                        if(el.owner_info.role === 'employer'){
+                      ${(function () {
+                        if (el.owner_info.role === "employer") {
                           return `
                             <svg version="1.1" id="Capa_1" class="Icon-image"
                               style="
@@ -444,11 +507,13 @@ const reload_jobs = function(){
                         </svg></fl-icon>
                     </span>
                     <div class="info-card-skills">
-                      ${el.jobs.map(function(job){
-                        return `
+                      ${el.jobs
+                        ?.map(function (job) {
+                          return `
                           <span>${job.name}</span>
                         `;
-                      }).join('')}
+                        })
+                        .join("")}
                     </div>
                   </div>
                 </div>
@@ -463,13 +528,21 @@ const reload_jobs = function(){
               <div class="info-card-action" ng-if="ProjectTile.project.currency.code !== 'TKN'">
                 <div class="info-card-price" ng-if="ProjectTile.project.price">
                   <span ng-if="ProjectTile.project.price.range">
-                    $${Math.round(el.budget.minimum * el.currency.exchange_rate)} -
-                    $${typeof el.budget.maximum !== 'undefined' ? Math.round(el.budget.maximum * el.currency.exchange_rate) : 'False'}
+                    $${Math.round(
+                      el.budget.minimum * el.currency.exchange_rate
+                    )} -
+                    $${
+                      typeof el.budget.maximum !== "undefined"
+                        ? Math.round(
+                            el.budget.maximum * el.currency.exchange_rate
+                          )
+                        : "False"
+                    }
                   </span>
                 </div>
                 <div class="info-card-price-type">
                   <span i18n-id="718e01467010e10a3d656443dae6e088" i18n-msg="USD [1: per hour ]">
-                    USD ${el.type === 'hourly' ? 'per hour' : ''}
+                    USD ${el.type === "hourly" ? "per hour" : ""}
                   </span>
                 </div>
               </div>
@@ -478,22 +551,43 @@ const reload_jobs = function(){
         </a>
       </li>
     `;
-      
-    }).join(' ');
+        })
+        .join(" ");
 
-    container.append(newContent);
-  })
-  .catch(function(err){
-    console.error(err);
-  });
+      container.append(newContent);
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
 };
 
-const loop_rand = function(){
+const loop_rand = function () {
   //const min = 5;
   //const max = 12;
   //const rand = Math.floor((Math.random() * (max - min + 1) + min) * 1000);
-  
   //if(autoload) reload_jobs();
-  
   //setTimeout(loop_rand, rand);
+};
+
+const getAuthDetail = function () {
+  axios.get(`/users/0.1/self/`);
+};
+
+const createBid = function () {
+  axios.post(
+    "https://www.freelancer.com/api/projects/0.1/bids/?compact=",
+    {
+      project_id: 15339400,
+      bidder_id: 123,
+      amount: 60,
+      period: 7,
+      milestone_percentage: 100,
+    },
+    {
+      headers: {
+        "content-type": "application/json",
+        "freelancer-oauth-v1": "<oauth_access_token>",
+      },
+    }
+  );
 };
