@@ -1,0 +1,1937 @@
+{
+  "status": "success",
+  "result": {
+    "projects": [
+      {
+        "id": 36603883,
+        "owner_id": 67326109,
+        "title": "Fix critical issue on website",
+        "status": "active",
+        "seo_url": "php/Fix-critical-issue-website",
+        "currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "I am looking for a skilled developer to fix a critical issue on my website. The specific problem is with the functionality, particularly with the backend. I need this issue to be resolved within 24 hours as it is urgent. \n\nIdeal Skills and Experience:\n- Strong experience with backend development\n- Familiarity with website functionality issues \n- Ability to work under pressure and meet tight deadlines \n\nIf you have the necessary skills and experience to fix this critical issue, please apply for this project.",
+        "jobs": [
+          {
+            "id": 3,
+            "name": "PHP",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "php",
+            "local": false
+          },
+          {
+            "id": 17,
+            "name": "Website Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "website_design",
+            "local": false
+          },
+          {
+            "id": 20,
+            "name": "Graphic Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "graphic_design",
+            "local": false
+          },
+          {
+            "id": 69,
+            "name": "WordPress",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "wordpress",
+            "local": false
+          },
+          {
+            "id": 335,
+            "name": "HTML",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "html",
+            "local": false
+          }
+        ],
+        "submitdate": 1684369100,
+        "preview_description": "I am looking for a skilled developer to fix a critical issue on my website. The specific problem is ",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "hourly",
+        "bidperiod": 7,
+        "budget": { "minimum": 15.0, "maximum": 25.0 },
+        "hourly_project_info": {
+          "commitment": { "hours": 40, "interval": "week" },
+          "duration_enum": "unspecified"
+        },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 15, "bid_avg": 18.666666666666668 },
+        "time_submitted": 1684369100,
+        "time_updated": 1684369100,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684365500,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603869,
+        "owner_id": 62603211,
+        "title": "Attention Designers! Create an Exceptional Brand Style Guide for Oroshiuri Systems!",
+        "status": "active",
+        "seo_url": "graphic-design/Attention-Designers-Create-Exceptional",
+        "currency": {
+          "id": 3,
+          "code": "AUD",
+          "sign": "$",
+          "name": "Australian Dollar",
+          "exchange_rate": 0.665983,
+          "country": "AU",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "Are you a talented designer who can turn concepts into captivating visual assets? Do you possess a keen eye for detail and a passion for creating comprehensive brand guidelines? Look no further! Oroshiuri Systems is seeking a skilled freelancer like you to craft an outstanding Brand Style Guide using Canva.\n\nAbout Oroshiuri Systems:\nOroshiuri Systems is a cutting-edge company dedicated to delivering innovative solutions in the field of technology. With our forward-thinking approach, we strive to revolutionize the industry and provide exceptional services to our clients. Our brand represents sophistication, reliability, and a commitment to excellence.\n\nProject Requirements:\nWe have already designed our striking logo and collateral materials, but now we need a comprehensive Brand Style Guide to ensure consistent and cohesive branding across all touchpoints. The guide will serve as a valuable resource, demonstrating how to effectively use our logo, specifying our brand colors, font choices, and other essential elements typically found in a brand style guide.\n\nYour Expertise:\nAs a skilled designer, you will leverage your creative flair and expertise in Canva to create an extraordinary Brand Style Guide that reflects Oroshiuri Systems' vision and values. Your responsibilities will include:\n\n- Designing a visually appealing and user-friendly guide using Canva.\n- Showcasing the proper usage of our logo in various contexts.\n- Defining and presenting our primary and secondary brand colors.\n- Selecting appropriate font choices for different applications.\n- Incorporating graphic elements and visual guidelines.\n- Outlining examples of correct and incorrect brand usage.\n- Including any other essential components to ensure brand consistency.\n\nRequirements:\nTo successfully undertake this project, you should possess the following qualifications:\n\n- Proven experience in graphic design and creating brand style guides.\n- Proficiency in Canva or similar design tools.\n- A strong understanding of branding principles and design aesthetics.\n- Excellent communication skills to collaborate effectively with our team.\n- Attention to detail and the ability to meet project deadlines.",
+        "jobs": [
+          {
+            "id": 20,
+            "name": "Graphic Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "graphic_design",
+            "local": false
+          },
+          {
+            "id": 97,
+            "name": "Branding",
+            "category": { "id": 6, "name": "Sales & Marketing" },
+            "seo_url": "branding",
+            "local": false
+          },
+          {
+            "id": 232,
+            "name": "Corporate Identity",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "corporate_identity",
+            "local": false
+          },
+          {
+            "id": 1057,
+            "name": "Brand Management",
+            "category": { "id": 6, "name": "Sales & Marketing" },
+            "seo_url": "brand_management",
+            "local": false
+          },
+          {
+            "id": 2163,
+            "name": "Canva",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "canva",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368940,
+        "preview_description": "Are you a talented designer who can turn concepts into captivating visual assets? Do you possess a k",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 40.0, "maximum": 400.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 18, "bid_avg": 210.11111111111111 },
+        "time_submitted": 1684368940,
+        "time_updated": 1684368940,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684365340,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603861,
+        "owner_id": 69604468,
+        "title": "Saas team wanted ",
+        "status": "active",
+        "seo_url": "backend-development/Saas-team-wanted",
+        "currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "I am looking for a Saas team to develop a new product. I am open to any suggestions for programming language or platform. The main skills required for this project are focused on development. I am looking for a team who has experience in developing Saas products. The ideal team should have experience in back-end and front-end development, as well as experience in database management and security. Additionally, experience in DevOps and cloud computing is a plus. The team should be able to work collaboratively and communicate effectively throughout the project.",
+        "jobs": [
+          {
+            "id": 1092,
+            "name": "Backend Development",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "backend_development",
+            "local": false
+          },
+          {
+            "id": 1541,
+            "name": "Kubernetes",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "kubernetes",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368833,
+        "preview_description": "I am looking for a Saas team to develop a new product. I am open to any suggestions for programming ",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 1500.0, "maximum": 3000.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 8, "bid_avg": 2243.75 },
+        "time_submitted": 1684368833,
+        "time_updated": 1684368833,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684365177,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603849,
+        "owner_id": 69604468,
+        "title": "Backend platform team - Router experience ",
+        "status": "active",
+        "seo_url": "mysql/Backend-platform-team-Router-experience",
+        "currency": {
+          "id": 8,
+          "code": "EUR",
+          "sign": "\u20ac",
+          "name": "Euro",
+          "exchange_rate": 1.08385,
+          "country": "EU",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "Looking for a small backend development team that also have worked with telecom routers in the telecom space or manufacturing space.\n\nDo not bid with copy and paste comment \n\nMust show proof of the sector and past works ",
+        "jobs": [
+          {
+            "id": 305,
+            "name": "MySQL",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "mysql",
+            "local": false
+          },
+          {
+            "id": 1092,
+            "name": "Backend Development",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "backend_development",
+            "local": false
+          },
+          {
+            "id": 1541,
+            "name": "Kubernetes",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "kubernetes",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368826,
+        "preview_description": "Looking for a small backend development team that also have worked with telecom routers in the telec",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 3000.0, "maximum": 5000.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": true,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 3, "bid_avg": 3500.0 },
+        "time_submitted": 1684368826,
+        "time_updated": 1684368826,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": true,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": true,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684364982,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36600296,
+        "owner_id": 47075653,
+        "title": "Make this page on as a new multisite on my hosting",
+        "status": "active",
+        "seo_url": "wordpress/Make-this-page-new-multisite",
+        "currency": {
+          "id": 8,
+          "code": "EUR",
+          "sign": "\u20ac",
+          "name": "Euro",
+          "exchange_rate": 1.08385,
+          "country": "EU",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "25 euro final fee. only message me if you can do it in the next hour\n\nI have elementor pro and wordpress site set up. ",
+        "jobs": [
+          {
+            "id": 3,
+            "name": "PHP",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "php",
+            "local": false
+          },
+          {
+            "id": 17,
+            "name": "Website Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "website_design",
+            "local": false
+          },
+          {
+            "id": 69,
+            "name": "WordPress",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "wordpress",
+            "local": false
+          },
+          {
+            "id": 77,
+            "name": "CSS",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "css",
+            "local": false
+          },
+          {
+            "id": 335,
+            "name": "HTML",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "html",
+            "local": false
+          }
+        ],
+        "submitdate": 1684325207,
+        "preview_description": "25 euro final fee. only message me if you can do it in the next hour\n\nI have elementor pro and wordp",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 8.0, "maximum": 30.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 51, "bid_avg": 53.80392156862745 },
+        "time_submitted": 1684325207,
+        "time_updated": 1684368725,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684321607,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603852,
+        "owner_id": 58687152,
+        "title": "Logo file needed for print ",
+        "status": "active",
+        "seo_url": "graphic-design/Logo-file-needed-for-print",
+        "currency": {
+          "id": 9,
+          "code": "CAD",
+          "sign": "$",
+          "name": "Canadian Dollar",
+          "exchange_rate": 0.742649,
+          "country": "CA",
+          "is_external": false,
+          "is_escrowcom_supported": false
+        },
+        "description": "I am looking for a freelancer to create a logo file for my business. The file will primarily be used for brochures and flyers. I already have an existing logo that I would like the freelancer to work with. The ideal file format for the logo would be vector (AI or EPS). \n\nRequired skills and experience:\n- Proficiency in Adobe Illustrator or another vector graphics software\n- Experience in designing logos for print materials\n- Knowledge of typography and color theory\n- Attention to detail and ability to follow brand guidelines",
+        "jobs": [
+          {
+            "id": 20,
+            "name": "Graphic Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "graphic_design",
+            "local": false
+          },
+          {
+            "id": 32,
+            "name": "Logo Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "logo_design",
+            "local": false
+          },
+          {
+            "id": 57,
+            "name": "Photoshop",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "photoshop",
+            "local": false
+          },
+          {
+            "id": 70,
+            "name": "Illustrator",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "illustrator",
+            "local": false
+          },
+          {
+            "id": 168,
+            "name": "Adobe InDesign",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "indesign",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368644,
+        "preview_description": "I am looking for a freelancer to create a logo file for my business. The file will primarily be used",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 10.0, "maximum": 30.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 42, "bid_avg": 22.238095238095237 },
+        "time_submitted": 1684368644,
+        "time_updated": 1684368644,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684365024,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603841,
+        "owner_id": 69604399,
+        "title": "Graphic designer needed to create 3D render designs for new sleepwear company",
+        "status": "active",
+        "seo_url": "rendering/Graphic-designer-needed-create-render",
+        "currency": {
+          "id": 8,
+          "code": "EUR",
+          "sign": "\u20ac",
+          "name": "Euro",
+          "exchange_rate": 1.08385,
+          "country": "EU",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "Hello,\n\nI have a product concept for which I need a 3D render designed. The concept, in short, is a women\u2019s boxer brief for sleep.\n\nI\u2019m looking for a designer, ideally an industrial designer, to help me create a visual rendering to be able to send to our manufacturer, as well as display on our website.\n\nPlease reach out to me as soon as possible with your interest and availability \u2013 this is a brand-new company that I\u2019m very excited about and we\u2019re moving fast into product development!\n\nThanks in advance,\n",
+        "jobs": [
+          {
+            "id": 20,
+            "name": "Graphic Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "graphic_design",
+            "local": false
+          },
+          {
+            "id": 93,
+            "name": "3D Rendering",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "rendering",
+            "local": false
+          },
+          {
+            "id": 394,
+            "name": "3D Modelling",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "3d_modelling",
+            "local": false
+          },
+          {
+            "id": 395,
+            "name": "3D Animation",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "3d_animation",
+            "local": false
+          },
+          {
+            "id": 505,
+            "name": "3D Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "3d_design",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368515,
+        "preview_description": "Hello,\n\nI have a product concept for which I need a 3D render designed. The concept, in short, is a ",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 250.0, "maximum": 750.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 19, "bid_avg": 413.63157894736844 },
+        "time_submitted": 1684368515,
+        "time_updated": 1684368515,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684375696,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603766,
+        "owner_id": 69604419,
+        "title": "4 product dispensing unit",
+        "status": "active",
+        "seo_url": "electronics/product-dispensing-unit",
+        "currency": {
+          "id": 9,
+          "code": "CAD",
+          "sign": "$",
+          "name": "Canadian Dollar",
+          "exchange_rate": 0.742649,
+          "country": "CA",
+          "is_external": false,
+          "is_escrowcom_supported": false
+        },
+        "description": "I'm constructing a dispensing unit with 4 tanks, 4 pumps, 4 hall effect liquid volume meters (pulse), and 4 solenoid valves. The tanks will each have an ultrasonic sensor that will need to be calibrated on my end to establish liquid level. the meters will also need to be calibrated as each of the chemicals being dispensed has a different specific gravity and commodities will change periodically.\nThe touch screen needs to display tank volumes on the home screen, a company logo background, and 4 buttons to select the commodity to be dispensed. The next screen will need to enable the operator to select an amount to be dispensed from 50 to 2000 ml and also display a graphic of the tank with available volume. unit should be programed to dispense only when an \"execute\" button is pressed on screen, then the operator will press an analog  button which will be mounted on the wand and should only dispense for a maximum of 30 seconds until an error \" unable to dispense\" message appears.\n\n I have an Arduino  Uno r3 and a stone 7\" touchscreen with an 8 zone relay for the pumps and solenoids\n\nOperator should be able to turn unit on, view tank levels, select item to be dispensed, set quantity, press \"dispense\", pick up the wand and aim and place it in the area to receive product, press the button on the wand and unit should engage the pump and solenoid until the required amount is dispensed, then remove the wand and replace it into its holder and dispense the next product.",
+        "jobs": [
+          {
+            "id": 42,
+            "name": "Engineering",
+            "category": { "id": 5, "name": "Engineering & Science" },
+            "seo_url": "engineering",
+            "local": false
+          },
+          {
+            "id": 43,
+            "name": "Electronics",
+            "category": { "id": 5, "name": "Engineering & Science" },
+            "seo_url": "electronics",
+            "local": false
+          },
+          {
+            "id": 116,
+            "name": "Software Architecture",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "software_architecture",
+            "local": false
+          },
+          {
+            "id": 167,
+            "name": "Software Testing",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "software_testing",
+            "local": false
+          },
+          {
+            "id": 324,
+            "name": "Product Design",
+            "category": { "id": 8, "name": "Product Sourcing & Manufacturing" },
+            "seo_url": "product_design",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368456,
+        "preview_description": "I'm constructing a dispensing unit with 4 tanks, 4 pumps, 4 hall effect liquid volume meters (pulse)",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 250.0, "maximum": 750.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 20, "bid_avg": 411.0 },
+        "time_submitted": 1684368456,
+        "time_updated": 1684368456,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": true,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684364627,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603749,
+        "owner_id": 69604050,
+        "title": "Self Portrait / Fantasy / Stippling",
+        "status": "active",
+        "seo_url": "illustration/Self-Portrait-Fantasy-Stippling-36603749",
+        "currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "I need a self portrait of myself done where I am drawn as/portrayed as a mythical creature (I was thinking devil/ram horns protruding from my forehead and evil looking eyes) and the face must be shaded with the stippling technique. Attached is the photo I would like the portrait based off of. Must be done in micron pen as well.",
+        "jobs": [
+          {
+            "id": 20,
+            "name": "Graphic Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "graphic_design",
+            "local": false
+          },
+          {
+            "id": 57,
+            "name": "Photoshop",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "photoshop",
+            "local": false
+          },
+          {
+            "id": 70,
+            "name": "Illustrator",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "illustrator",
+            "local": false
+          },
+          {
+            "id": 170,
+            "name": "Illustration",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "illustration",
+            "local": false
+          },
+          {
+            "id": 234,
+            "name": "Caricature & Cartoons",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "caricature_cartoons",
+            "local": false
+          }
+        ],
+        "submitdate": 1684368095,
+        "preview_description": "I need a self portrait of myself done where I am drawn as/portrayed as a mythical creature (I was th",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "hourly",
+        "bidperiod": 7,
+        "budget": { "minimum": 15.0, "maximum": 25.0 },
+        "hourly_project_info": {
+          "commitment": { "hours": 40, "interval": "week" },
+          "duration_enum": "unspecified"
+        },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 15, "bid_avg": 21.333333333333332 },
+        "time_submitted": 1684368095,
+        "time_updated": 1684368095,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684364462,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      },
+      {
+        "id": 36603741,
+        "owner_id": 205923,
+        "title": "Website Design",
+        "status": "active",
+        "seo_url": "website-design/Website-Design-36603741",
+        "currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US",
+          "is_external": false,
+          "is_escrowcom_supported": true
+        },
+        "description": "I am looking to build creating web site for my personnel and as well as my non-profit organization",
+        "jobs": [
+          {
+            "id": 17,
+            "name": "Website Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "website_design",
+            "local": false
+          },
+          {
+            "id": 20,
+            "name": "Graphic Design",
+            "category": { "id": 3, "name": "Design, Media & Architecture" },
+            "seo_url": "graphic_design",
+            "local": false
+          },
+          {
+            "id": 69,
+            "name": "WordPress",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "wordpress",
+            "local": false
+          },
+          {
+            "id": 335,
+            "name": "HTML",
+            "category": { "id": 1, "name": "Websites, IT & Software" },
+            "seo_url": "html",
+            "local": false
+          }
+        ],
+        "submitdate": 1684367883,
+        "preview_description": "I am looking to build creating web site for my personnel and as well as my non-profit organization",
+        "deleted": false,
+        "nonpublic": false,
+        "hidebids": false,
+        "type": "fixed",
+        "bidperiod": 7,
+        "budget": { "minimum": 30.0, "maximum": 250.0 },
+        "featured": false,
+        "urgent": false,
+        "assisted": false,
+        "active_prepaid_milestone": {},
+        "bid_stats": { "bid_count": 65, "bid_avg": 160.23076923076923 },
+        "time_submitted": 1684367883,
+        "time_updated": 1684367883,
+        "upgrades": {
+          "featured": false,
+          "sealed": false,
+          "nonpublic": false,
+          "fulltime": false,
+          "urgent": false,
+          "qualified": false,
+          "NDA": false,
+          "assisted": false,
+          "active_prepaid_milestone": {},
+          "ip_contract": false,
+          "non_compete": false,
+          "project_management": false,
+          "pf_only": false,
+          "recruiter": false,
+          "listed": true,
+          "premium": false,
+          "enterprise": false
+        },
+        "language": "en",
+        "hireme": false,
+        "frontend_project_status": "open",
+        "location": { "country": {} },
+        "true_location": { "country": {} },
+        "local": false,
+        "negotiated": false,
+        "time_free_bids_expire": 1684364262,
+        "pool_ids": [1],
+        "enterprise_ids": [],
+        "is_escrow_project": false,
+        "is_seller_kyc_required": false,
+        "is_buyer_kyc_required": false,
+        "project_reject_reason": {}
+      }
+    ],
+    "users": {
+      "205923": {
+        "id": 205923,
+        "username": "iitsasi",
+        "closed": false,
+        "hourly_rate": 10.0,
+        "registration_date": 1148995272,
+        "limited_account": false,
+        "display_name": "iitsasi",
+        "location": {
+          "country": {
+            "name": "United States",
+            "flag_url": "/img/flags/png/us.png",
+            "code": "us",
+            "highres_flag_url": "/img/flags/highres_png/united-states.png",
+            "flag_url_cdn": "//cdn6.f-cdn.com/img/flags/png/us.png",
+            "highres_flag_url_cdn": "//cdn3.f-cdn.com/img/flags/highres_png/united-states.png"
+          },
+          "city": "Herndon",
+          "latitude": 38.97,
+          "longitude": -77.386,
+          "vicinity": "Herndon",
+          "administrative_area": "Virginia"
+        },
+        "role": "employer",
+        "chosen_role": "both",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 205923
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 205923
+          },
+          "last12months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 205923
+          },
+          "user_id": 205923,
+          "role": "employer",
+          "earnings_score": 0.0
+        },
+        "status": {
+          "payment_verified": false,
+          "email_verified": true,
+          "deposit_made": false,
+          "profile_complete": true,
+          "phone_verified": false,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US"
+        },
+        "primary_language": "en",
+        "public_name": "Sasidhara",
+        "company": "",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 81,
+          "country": "US",
+          "timezone": "America/Chicago",
+          "offset": 19.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "47075653": {
+        "id": 47075653,
+        "username": "eco20112011",
+        "closed": false,
+        "hourly_rate": 40.0,
+        "registration_date": 1591386074,
+        "limited_account": false,
+        "display_name": "eco20112011",
+        "location": {
+          "country": {
+            "name": "Ireland",
+            "flag_url": "/img/flags/png/ie.png",
+            "code": "ie",
+            "highres_flag_url": "/img/flags/highres_png/ireland.png",
+            "flag_url_cdn": "//cdn3.f-cdn.com/img/flags/png/ie.png",
+            "highres_flag_url_cdn": "//cdn2.f-cdn.com/img/flags/highres_png/ireland.png"
+          },
+          "city": "Dublin",
+          "latitude": 52.657000000000004,
+          "longitude": -8.571
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 4.960036166365279,
+            "positive": 0.011301989150090414,
+            "category_ratings": {
+              "clarity_spec": 4.957504520795658,
+              "communication": 4.957504520795658,
+              "payment_prom": 4.96383363471971,
+              "professionalism": 4.957504520795658,
+              "work_for_again": 4.96383363471971
+            },
+            "all": 25,
+            "reviews": 24,
+            "complete": 25,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 47075653
+          },
+          "last3months": {
+            "overall": 5.000000000000001,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 5.000000000000001,
+              "communication": 5.000000000000001,
+              "payment_prom": 5.000000000000001,
+              "professionalism": 5.000000000000001,
+              "work_for_again": 5.000000000000001
+            },
+            "all": 3,
+            "reviews": 3,
+            "complete": 3,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 47075653
+          },
+          "last12months": {
+            "overall": 4.99572301425662,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 4.992871690427698,
+              "communication": 4.992871690427698,
+              "payment_prom": 5.0,
+              "professionalism": 4.992871690427698,
+              "work_for_again": 5.0
+            },
+            "all": 14,
+            "reviews": 13,
+            "complete": 14,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 47075653
+          },
+          "user_id": 47075653,
+          "role": "employer",
+          "earnings_score": 4.7667
+        },
+        "status": {
+          "payment_verified": true,
+          "email_verified": true,
+          "deposit_made": true,
+          "profile_complete": true,
+          "phone_verified": true,
+          "identity_verified": false,
+          "facebook_connected": true,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 8,
+          "code": "EUR",
+          "sign": "\u20ac",
+          "name": "Euro",
+          "exchange_rate": 1.08385,
+          "country": "EU"
+        },
+        "primary_language": "en",
+        "public_name": "Eamon C.",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 2,
+          "country": "CI",
+          "timezone": "Africa/Abidjan",
+          "offset": 0.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "58687152": {
+        "id": 58687152,
+        "username": "skatri86",
+        "closed": false,
+        "registration_date": 1634829065,
+        "limited_account": false,
+        "display_name": "skatri86",
+        "location": {
+          "country": {
+            "name": "Canada",
+            "flag_url": "/img/flags/png/ca.png",
+            "code": "ca",
+            "highres_flag_url": "/img/flags/highres_png/canada.png",
+            "flag_url_cdn": "//cdn6.f-cdn.com/img/flags/png/ca.png",
+            "highres_flag_url_cdn": "//cdn6.f-cdn.com/img/flags/highres_png/canada.png"
+          },
+          "city": "Brampton"
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 58687152
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 58687152
+          },
+          "last12months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 58687152
+          },
+          "user_id": 58687152,
+          "role": "employer",
+          "earnings_score": 0.0
+        },
+        "status": {
+          "payment_verified": false,
+          "email_verified": true,
+          "deposit_made": false,
+          "profile_complete": false,
+          "phone_verified": false,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 9,
+          "code": "CAD",
+          "sign": "$",
+          "name": "Canadian Dollar",
+          "exchange_rate": 0.742649,
+          "country": "CA"
+        },
+        "primary_language": "en",
+        "public_name": "skatri86",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 384,
+          "country": "CA",
+          "timezone": "America/Toronto",
+          "offset": 20.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "62603211": {
+        "id": 62603211,
+        "username": "dwestera",
+        "closed": false,
+        "registration_date": 1654565314,
+        "limited_account": false,
+        "display_name": "dwestera",
+        "location": {
+          "country": {
+            "name": "Australia",
+            "flag_url": "/img/flags/png/au.png",
+            "code": "au",
+            "highres_flag_url": "/img/flags/highres_png/australia.png",
+            "flag_url_cdn": "//cdn5.f-cdn.com/img/flags/png/au.png",
+            "highres_flag_url_cdn": "//cdn5.f-cdn.com/img/flags/highres_png/australia.png"
+          },
+          "city": "Brisbane",
+          "latitude": -27.47,
+          "longitude": 153.026,
+          "vicinity": "Brisbane",
+          "administrative_area": "Queensland"
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 4.999999999999999,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 4.999999999999999,
+              "communication": 4.999999999999999,
+              "payment_prom": 4.999999999999999,
+              "professionalism": 4.999999999999999,
+              "work_for_again": 4.999999999999999
+            },
+            "all": 15,
+            "reviews": 13,
+            "complete": 15,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 62603211
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "all": 0,
+            "reviews": 0,
+            "complete": 0,
+            "incomplete": 0,
+            "completion_rate": 0.0,
+            "user_id": 62603211
+          },
+          "last12months": {
+            "overall": 4.999999999999999,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 4.999999999999999,
+              "communication": 4.999999999999999,
+              "payment_prom": 4.999999999999999,
+              "professionalism": 4.999999999999999,
+              "work_for_again": 4.999999999999999
+            },
+            "all": 14,
+            "reviews": 12,
+            "complete": 14,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 62603211
+          },
+          "user_id": 62603211,
+          "role": "employer",
+          "earnings_score": 4.4423
+        },
+        "status": {
+          "payment_verified": true,
+          "email_verified": true,
+          "deposit_made": true,
+          "profile_complete": false,
+          "phone_verified": true,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": true
+        },
+        "primary_currency": {
+          "id": 3,
+          "code": "AUD",
+          "sign": "$",
+          "name": "Australian Dollar",
+          "exchange_rate": 0.665983,
+          "country": "AU"
+        },
+        "primary_language": "en",
+        "public_name": "Dirk W.",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 412,
+          "country": "AU",
+          "timezone": "Australia/Brisbane",
+          "offset": 10.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "67326109": {
+        "id": 67326109,
+        "username": "connormcclenahan",
+        "closed": false,
+        "registration_date": 1674665281,
+        "limited_account": false,
+        "display_name": "connormcclenahan",
+        "location": {
+          "country": {
+            "name": "United States",
+            "flag_url": "/img/flags/png/us.png",
+            "code": "us",
+            "highres_flag_url": "/img/flags/highres_png/united-states.png",
+            "flag_url_cdn": "//cdn6.f-cdn.com/img/flags/png/us.png",
+            "highres_flag_url_cdn": "//cdn3.f-cdn.com/img/flags/highres_png/united-states.png"
+          },
+          "city": "Los Angeles",
+          "latitude": 34.052,
+          "longitude": -118.244,
+          "vicinity": "Los Angeles",
+          "administrative_area": "California"
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 5.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 5.0,
+              "communication": 5.0,
+              "payment_prom": 5.0,
+              "professionalism": 5.0,
+              "work_for_again": 5.0
+            },
+            "all": 3,
+            "reviews": 3,
+            "complete": 3,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 67326109
+          },
+          "last3months": {
+            "overall": 5.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 5.0,
+              "communication": 5.0,
+              "payment_prom": 5.0,
+              "professionalism": 5.0,
+              "work_for_again": 5.0
+            },
+            "all": 2,
+            "reviews": 2,
+            "complete": 2,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 67326109
+          },
+          "last12months": {
+            "overall": 5.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 5.0,
+              "communication": 5.0,
+              "payment_prom": 5.0,
+              "professionalism": 5.0,
+              "work_for_again": 5.0
+            },
+            "all": 2,
+            "reviews": 2,
+            "complete": 2,
+            "incomplete": 0,
+            "completion_rate": 1.0,
+            "user_id": 67326109
+          },
+          "user_id": 67326109,
+          "role": "employer",
+          "earnings_score": 3.7719
+        },
+        "status": {
+          "payment_verified": true,
+          "email_verified": true,
+          "deposit_made": true,
+          "profile_complete": false,
+          "phone_verified": false,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US"
+        },
+        "primary_language": "en",
+        "public_name": "Connor M.",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_account_linked": true,
+        "escrowcom_interaction_required": true,
+        "timezone": {
+          "id": 105,
+          "country": "US",
+          "timezone": "America/Los_Angeles",
+          "offset": 17.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "69604050": {
+        "id": 69604050,
+        "username": "hrhy626262",
+        "closed": false,
+        "registration_date": 1684365328,
+        "limited_account": false,
+        "display_name": "hrhy626262",
+        "location": {
+          "country": {
+            "name": "Malaysia",
+            "flag_url": "/img/flags/png/my.png",
+            "code": "my",
+            "highres_flag_url": "/img/flags/highres_png/malaysia.png",
+            "flag_url_cdn": "//cdn2.f-cdn.com/img/flags/png/my.png",
+            "highres_flag_url_cdn": "//cdn3.f-cdn.com/img/flags/highres_png/malaysia.png"
+          },
+          "city": "Ashburn"
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604050
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604050
+          },
+          "last12months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604050
+          },
+          "user_id": 69604050,
+          "role": "employer",
+          "earnings_score": 0.0
+        },
+        "status": {
+          "payment_verified": false,
+          "email_verified": true,
+          "deposit_made": false,
+          "profile_complete": false,
+          "phone_verified": true,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US"
+        },
+        "primary_language": "en",
+        "public_name": "hrhy626262",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 120,
+          "country": "US",
+          "timezone": "America/New_York",
+          "offset": 20.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "69604399": {
+        "id": 69604399,
+        "username": "kingnoel1274",
+        "closed": false,
+        "registration_date": 1684368134,
+        "limited_account": false,
+        "display_name": "kingnoel1274",
+        "location": {
+          "country": {
+            "name": "Malaysia",
+            "flag_url": "/img/flags/png/my.png",
+            "code": "my",
+            "highres_flag_url": "/img/flags/highres_png/malaysia.png",
+            "flag_url_cdn": "//cdn2.f-cdn.com/img/flags/png/my.png",
+            "highres_flag_url_cdn": "//cdn3.f-cdn.com/img/flags/highres_png/malaysia.png"
+          },
+          "city": "Brussels"
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604399
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604399
+          },
+          "last12months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604399
+          },
+          "user_id": 69604399,
+          "role": "employer",
+          "earnings_score": 0.0
+        },
+        "status": {
+          "payment_verified": false,
+          "email_verified": true,
+          "deposit_made": false,
+          "profile_complete": false,
+          "phone_verified": true,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 8,
+          "code": "EUR",
+          "sign": "\u20ac",
+          "name": "Euro",
+          "exchange_rate": 1.08385,
+          "country": "EU"
+        },
+        "primary_language": "en",
+        "public_name": "kingnoel1274",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 247,
+          "country": "BE",
+          "timezone": "Europe/Brussels",
+          "offset": 2.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "69604419": {
+        "id": 69604419,
+        "username": "Barryjva",
+        "closed": false,
+        "registration_date": 1684368226,
+        "limited_account": false,
+        "display_name": "Barryjva",
+        "location": {
+          "country": {
+            "name": "Canada",
+            "flag_url": "/img/flags/png/ca.png",
+            "code": "ca",
+            "highres_flag_url": "/img/flags/highres_png/canada.png",
+            "flag_url_cdn": "//cdn6.f-cdn.com/img/flags/png/ca.png",
+            "highres_flag_url_cdn": "//cdn6.f-cdn.com/img/flags/highres_png/canada.png"
+          },
+          "city": "Calgary",
+          "latitude": 51.045,
+          "longitude": -114.072,
+          "vicinity": "Calgary",
+          "administrative_area": "Alberta"
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604419
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604419
+          },
+          "last12months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604419
+          },
+          "user_id": 69604419,
+          "role": "employer",
+          "earnings_score": 0.0
+        },
+        "status": {
+          "payment_verified": true,
+          "email_verified": true,
+          "deposit_made": true,
+          "profile_complete": false,
+          "phone_verified": false,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 9,
+          "code": "CAD",
+          "sign": "$",
+          "name": "Canadian Dollar",
+          "exchange_rate": 0.742649,
+          "country": "CA"
+        },
+        "primary_language": "en",
+        "public_name": "Barryjva",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 88,
+          "country": "CA",
+          "timezone": "America/Edmonton",
+          "offset": 18.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      },
+      "69604468": {
+        "id": 69604468,
+        "username": "fredsamdad",
+        "closed": false,
+        "registration_date": 1684368482,
+        "limited_account": false,
+        "display_name": "fredsamdad",
+        "location": {
+          "country": {
+            "name": "Ireland",
+            "flag_url": "/img/flags/png/ie.png",
+            "code": "ie",
+            "highres_flag_url": "/img/flags/highres_png/ireland.png",
+            "flag_url_cdn": "//cdn3.f-cdn.com/img/flags/png/ie.png",
+            "highres_flag_url_cdn": "//cdn2.f-cdn.com/img/flags/highres_png/ireland.png"
+          }
+        },
+        "role": "employer",
+        "chosen_role": "employer",
+        "employer_reputation": {
+          "entire_history": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604468
+          },
+          "last3months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604468
+          },
+          "last12months": {
+            "overall": 0.0,
+            "positive": 0.0,
+            "category_ratings": {
+              "clarity_spec": 0.0,
+              "communication": 0.0,
+              "payment_prom": 0.0,
+              "professionalism": 0.0,
+              "work_for_again": 0.0
+            },
+            "user_id": 69604468
+          },
+          "user_id": 69604468,
+          "role": "employer",
+          "earnings_score": 0.0
+        },
+        "status": {
+          "payment_verified": false,
+          "email_verified": true,
+          "deposit_made": false,
+          "profile_complete": false,
+          "phone_verified": true,
+          "identity_verified": false,
+          "facebook_connected": false,
+          "freelancer_verified_user": false,
+          "linkedin_connected": false,
+          "custom_charge_verified": false
+        },
+        "primary_currency": {
+          "id": 1,
+          "code": "USD",
+          "sign": "$",
+          "name": "US Dollar",
+          "exchange_rate": 1.0,
+          "country": "US"
+        },
+        "primary_language": "en",
+        "public_name": "fredsamdad",
+        "pool_ids": [],
+        "enterprise_ids": [],
+        "escrowcom_interaction_required": false,
+        "timezone": {
+          "id": 180,
+          "country": "IL",
+          "timezone": "Asia/Jerusalem",
+          "offset": 3.0
+        },
+        "oauth_password_credentials_allowed": false,
+        "registration_completed": true,
+        "is_profile_visible": true
+      }
+    },
+    "total_count": 3513
+  },
+  "request_id": "6fa68c7f6df8551d27eb44ae745144b5"
+}

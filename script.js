@@ -1,4 +1,5 @@
 let autoload = true;
+let authUser = {};
 
 $(document).ready(function () {
   $(".search-result-input-sort").empty();
@@ -31,6 +32,8 @@ $(document).ready(function () {
     e.preventDefault();
     reload_jobs();
   });
+
+  getAuthDetail().then((user) => (authUser = user));
 });
 
 const countries = [
@@ -306,6 +309,8 @@ const reload_jobs = function () {
         user_employer_reputation: true,
         user_status: true,
         job_details: true,
+        user_country_details: true,
+        user_location_details: true,
         countries: countries
           .filter((item) => !remove_countries_code.includes(item.code))
           .map((item) => item.code),
@@ -383,15 +388,9 @@ const reload_jobs = function () {
                     </span>
                   </div>
                   <div class="info-card-details info-card-details--hasTooltip info-card-grid-item">
-                    <img src="https://www.f-cdn.com/assets/main/en/assets/flags/${countries
-                      .find(function (country) {
-                        return (
-                          country.name === el.owner_info.location.country.name
-                        );
-                      })
-                      .code.toLowerCase()}.svg" title="${
-            el.owner_info.location.country.name
-          }" class="fh-flag-image" width="20" style="margin-right: 8px;">
+                    <img src="${
+                      el.owner_info.location.country.flag_url_cdn
+                    }" class="fh-flag-image" width="20" style="margin-right: 8px;">
                     <span class="Icon Icon--small info-card--iconSpace" title="Contest owner"
                       i18n-title-id="d4a1ba56edb003f1e379139218be68e7" i18n-title-msg="Contest owner" i18n-id="">
                       <fl-icon name="ui-user-non-verified">
@@ -570,18 +569,38 @@ const loop_rand = function () {
 };
 
 const getAuthDetail = function () {
-  axios.get(`/users/0.1/self/`);
+  return new Promise((resolve, reject) => {
+    axios
+      .get(`https://www.freelancer.com/api/users/0.1/self/`)
+      .then((res) => {
+        resolve(res.data.result);
+      })
+      .catch((error) => {
+        console.error(error);
+        reject(error);
+      });
+  });
 };
 
-const createBid = function () {
+const searchProjects = function (projects) {
+  // owner account status
+  projects = projects.filter((el) => !!el.owner_info.status.payment_verified);
+  projects = projects.filter((el) => !!el.owner_info.status.email_verified);
+
+  // project status
+  projects = projects.filter((el) => el.status === "active");
+};
+
+const createBid = function (project) {
   axios.post(
     "https://www.freelancer.com/api/projects/0.1/bids/?compact=",
     {
-      project_id: 15339400,
-      bidder_id: 123,
-      amount: 60,
-      period: 7,
+      project_id: project.id,
+      bidder_id: user.id,
+      amount: project.budget.maximum,
+      period: project.bidperiod,
       milestone_percentage: 100,
+      description: ``,
     },
     {
       headers: {
