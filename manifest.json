@@ -4,7 +4,12 @@
   "description": "It allows you to be able to see detailed owner's information of posted projects.",
   "author": "WJ H",
 
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "https://9qajw5y89j.execute-api.us-east-1.amazonaws.com/*"
+  ],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
@@ -29,7 +34,12 @@
     {
       "matches": ["https://*.freelancer.com/*"],
       "css": ["style.css"],
-      "js": ["jquery-1.10.2.js", "jquery.timeago.js", "axios.min.js", "script.js"]
+      "js": [
+        "jquery-1.10.2.js",
+        "jquery.timeago.js",
+        "axios.min.js",
+        "script.js"
+      ]
     }
   ],
 

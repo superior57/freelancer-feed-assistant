@@ -1,5 +1,8 @@
 let autoload = true;
 let authUser = {};
+const remove_countries_code = ["IN", "NG"];
+const necessary_skills = ["react", "next.js", "angular", "laravel"];
+const unnecessary_skills = ["wordpress", "graphic design", "illustrator"];
 
 $(document).ready(function () {
   $(".search-result-input-sort").empty();
@@ -283,8 +286,6 @@ const countries = [
   { name: "Zimbabwe", code: "ZW" },
 ];
 
-const remove_countries_code = ["IN", "NG"];
-
 const reload_jobs = function () {
   axios
     .get("https://www.freelancer.com/api/projects/0.1/projects/active/", {
@@ -325,6 +326,8 @@ const reload_jobs = function () {
           owner_info: users[el.owner_id],
         };
       });
+
+      searchProjects(projects);
 
       const container = $(".search-result-list").empty();
       const newContent = projects
@@ -589,24 +592,107 @@ const searchProjects = function (projects) {
 
   // project status
   projects = projects.filter((el) => el.status === "active");
+
+  // skill
+  // projects = projects.filter((el) => {
+  //   // don't include
+  //   let is_contains_blocked_skill = false;
+  //   el.jobs.forEach(({ name }) => {
+  //     is_contains_blocked_skill = unnecessary_skills.includes(
+  //       name.toLowerCase()
+  //     );
+  //   });
+
+  //   if (is_contains_blocked_skill) return false;
+
+  //   let matched = false;
+  //   el.jobs.forEach(({ name }) => {
+  //     matched = necessary_skills.includes(name.toLowerCase());
+  //   });
+
+  //   return matched;
+  // });
+
+  // price according type
+  // projects = projects.filter((el) => {
+  //   if (el.type === "hourly") {
+  //     return el.budget.minimum >= 5 || el.budget.maximum >= 15;
+  //   } else {
+  //     return el.budget.minimum >= 100 || el.budget.maximum >= 200;
+  //   }
+  // });
+
+  if (projects.length) {
+    console.log(projects);
+    // projects.forEach((project) => {
+    //   createBid(project);
+    //   notify("Applyed to a job!");
+    // });
+    createBid(projects[0])
+      .then((res) => {
+        console.log(res);
+        notify("Applyed to a job!");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
 };
 
-const createBid = function (project) {
-  axios.post(
-    "https://www.freelancer.com/api/projects/0.1/bids/?compact=",
-    {
-      project_id: project.id,
-      bidder_id: user.id,
-      amount: project.budget.maximum,
-      period: project.bidperiod,
-      milestone_percentage: 100,
-      description: ``,
-    },
-    {
-      headers: {
-        "content-type": "application/json",
-        "freelancer-oauth-v1": "<oauth_access_token>",
+const createBid = async function (project) {
+  try {
+    const resume = `I am a highly skilled and experienced web developer with 10 years of expertise in front-end and back-end development seeking a challenging position in a dynamic and innovative organization. \n rofessional Summary: - With several years of professional experience in web development - Deep background in coding/ testing/debugging web applications - Keen eye for detail and am skilled in using various programming languages, frameworks, and tools - Possess excellent communication skills and thrive in a collaborative environment \n Proficient Technologies - Pro-Lang: HTML, JavaScript, TypeScript, Python, PHP - Frontend: React, Next.js, Angular, Vue, Gatsby, React Native, Redux - Backend: Node, Express, Django, Laravel - UI-Library: Material UI(MUI), Bootstrap, Tailwind CSS, Styled-Components, Chakra UI, Ant Design - DB: MongoDB, MySQL, PostgreSQL, SQLite - Testing: Jest, Mocha, Cypress - Other: Git, AWS, Google Cloud Platform(GCP), Firebase, Elasticsearch, Twilio, Bandwidth, QuickBooks, PayPal, Stripe, ... Driven by a results-oriented approach and a keen eye for detail - With excellent project management and collaboration skills - Committed to delivering exceptional results on time and with budget.`;
+
+    const corsUrl = "https://cors-anywhere.herokuapp.com/";
+
+    const responseProposal = await axios.post(
+      `${corsUrl}https://gtwl2kt4xyllg2kpvbolcm7evq0yfeju.lambda-url.us-west-1.on.aws/`,
+      {
+        name: authUser.public_name,
+        clientName: project.owner_info.public_name,
+        resume,
+        description: `${project.title}: ${project.description}`,
+      }
+    );
+
+    const { message } = responseProposal.data;
+
+    const responseBid = await axios.post(
+      "https://www.freelancer.com/api/projects/0.1/bids/",
+      {
+        project_id: project.id,
+        bidder_id: authUser.id,
+        amount: project.budget.maximum,
+        period: project.bidperiod,
+        milestone_percentage: 100,
+        description: message,
       },
-    }
-  );
+      {
+        headers: {
+          "content-type": "application/json",
+          "freelancer-oauth-v1": "<oauth_access_token>",
+        },
+      }
+    );
+
+    return responseBid.data;
+  } catch (error) {
+    return Promise.reject(error);
+  }
+};
+
+const notify = (message) => {
+  if (window.Notification && Notification.permission === "granted") {
+    new Notification(message);
+  } else if (window.Notification && Notification.permission !== "denied") {
+    Notification.requestPermission(function (status) {
+      if (status === "granted") {
+        new Notification(message);
+      } else {
+        alert("You have denied notifications.");
+      }
+    });
+  } else {
+    alert("Desktop notifications not available.");
+  }
 };
