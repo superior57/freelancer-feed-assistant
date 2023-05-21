@@ -1,8 +1,43 @@
+"use strict";
+
 let autoload = true;
 let authUser = {};
-const remove_countries_code = ["IN", "NG"];
-const necessary_skills = ["react", "next.js", "angular", "laravel"];
-const unnecessary_skills = ["wordpress", "graphic design", "illustrator"];
+let searchInfo = {};
+
+const getSearchInfo = () =>
+  new Promise((resolve) => {
+    chrome.storage.sync.get(null, (data) => {
+      const searchInfo = {
+        necessary_skills: data.necessary_skills.split(",") || [
+          "react.js",
+          "next.js",
+          "angular",
+          "laravel",
+          "node.js",
+          "vue.js",
+          "redux",
+          "mui",
+          "PHP",
+        ],
+        unnecessary_skills: data.unnecessary_skills.split(",") || [
+          "wordpress",
+          "graphic design",
+          "illustrator",
+        ],
+        remove_countries_code: data.remove_countries_code.split(",") || [
+          "IN",
+          "NG",
+          "PK",
+        ],
+        price_hourly_min: +(data.price_hourly_min || "5"),
+        price_hourly_max: +(data.price_hourly_max || "15"),
+        price_fix_min: +(data.price_fix_min || "100"),
+        price_fix_max: +(data.price_fix_max || "200"),
+      };
+
+      resolve(searchInfo);
+    });
+  });
 
 $(document).ready(function () {
   $(".search-result-input-sort").empty();
@@ -287,53 +322,66 @@ const countries = [
 ];
 
 const reload_jobs = function () {
-  axios
-    .get("https://www.freelancer.com/api/projects/0.1/projects/active/", {
-      params: {
-        compact: true,
-        enterprise_metadata_field_details: true,
-        forceShowLocationDetails: false,
-        full_description: true,
-        jobs: [
-          3, 9, 13, 17, 20, 51, 69, 77, 95, 116, 137, 237, 247, 305, 323, 335,
-          343, 355, 500, 519, 539, 564, 602, 669, 704, 741, 759, 763, 901, 1031,
-          1051, 1084, 1088, 1092, 1093, 1126, 1325, 1544, 1623, 1684,
-        ],
-        languages: ["de", "en", "es", "fr", "it", "pl", "pt", "ru", "tr"],
-        limit: 10,
-        new_pools: true,
-        offset: 0,
-        project_types: ["fixed", "hourly"],
-        sort_field: "submitdate",
-        upgrade_details: true,
-        user_details: true,
-        user_employer_reputation: true,
-        user_status: true,
-        job_details: true,
-        user_country_details: true,
-        user_location_details: true,
-        countries: countries
-          .filter((item) => !remove_countries_code.includes(item.code))
-          .map((item) => item.code),
-      },
-    })
-    .then(function (res) {
-      const data = res.data.result;
-      const users = data.users;
-      const projects = data.projects.map(function (el) {
-        return {
-          ...el,
-          owner_info: users[el.owner_id],
-        };
-      });
+  getSearchInfo().then((data) => {
+    searchInfo = data;
 
-      searchProjects(projects);
+    axios
+      .get("https://www.freelancer.com/api/projects/0.1/projects/active/", {
+        params: {
+          compact: true,
+          enterprise_metadata_field_details: true,
+          forceShowLocationDetails: false,
+          full_description: true,
+          jobs: [
+            3, 9, 13, 17, 20, 51, 69, 77, 95, 116, 137, 237, 247, 305, 323, 335,
+            343, 355, 500, 519, 539, 564, 602, 669, 704, 741, 759, 763, 901,
+            1031, 1051, 1084, 1088, 1092, 1093, 1126, 1325, 1544, 1623, 1684,
+          ],
+          languages: ["de", "en", "es", "fr", "it", "pl", "pt", "ru", "tr"],
+          limit: 10,
+          new_pools: true,
+          offset: 0,
+          project_types: ["fixed", "hourly"],
+          sort_field: "submitdate",
+          upgrade_details: true,
+          user_details: true,
+          user_employer_reputation: true,
+          user_status: true,
+          job_details: true,
+          user_country_details: true,
+          user_location_details: true,
+          countries: countries
+            .filter(
+              (item) => !searchInfo.remove_countries_code.includes(item.code)
+            )
+            .map((item) => item.code),
+        },
+      })
+      .then(function (res) {
+        const data = res.data.result;
+        const users = data.users;
+        const projects = data.projects.map(function (el) {
+          return {
+            ...el,
+            owner_info: users[el.owner_id],
+          };
+        });
 
-      const container = $(".search-result-list").empty();
-      const newContent = projects
-        .map(function (el) {
-          return `
-      <li ng-repeat="project in search.results.projects">
+        const best_projects = searchProjects(projects);
+
+        const container = $(".search-result-list").empty();
+        const newContent = [
+          ...best_projects,
+          ...projects.filter(
+            ({ id }) => !best_projects.some((el) => el.id === id)
+          ),
+        ]
+          .map(function (el) {
+            const is_best = best_projects.some(({ id }) => id === el.id);
+            return `
+      <li ng-repeat="project in search.results.projects" ${
+        is_best ? `style="background: #ffff002e;"` : ""
+      }>
         <a class="search-result-link" href="/projects/${
           el.seo_url
         }" target="_blank">
@@ -553,14 +601,15 @@ const reload_jobs = function () {
         </a>
       </li>
     `;
-        })
-        .join(" ");
+          })
+          .join(" ");
 
-      container.append(newContent);
-    })
-    .catch(function (err) {
-      console.error(err);
-    });
+        container.append(newContent);
+      })
+      .catch(function (err) {
+        console.error(err);
+      });
+  });
 };
 
 const loop_rand = function () {
@@ -587,56 +636,73 @@ const getAuthDetail = function () {
 
 const searchProjects = function (projects) {
   // owner account status
-  projects = projects.filter((el) => !!el.owner_info.status.payment_verified);
+  projects = projects.filter(
+    (el) =>
+      el.owner_info.status.deposit_made || el.owner_info.status.payment_verified
+  );
   projects = projects.filter((el) => !!el.owner_info.status.email_verified);
 
   // project status
   projects = projects.filter((el) => el.status === "active");
 
   // skill
-  // projects = projects.filter((el) => {
-  //   // don't include
-  //   let is_contains_blocked_skill = false;
-  //   el.jobs.forEach(({ name }) => {
-  //     is_contains_blocked_skill = unnecessary_skills.includes(
-  //       name.toLowerCase()
-  //     );
-  //   });
+  projects = projects.filter((el) => {
+    // don't include
+    let is_contains_blocked_skill = false;
+    el.jobs.forEach(({ name }) => {
+      searchInfo.unnecessary_skills.forEach((skill) => {
+        if (name.toLowerCase() === skill.toLowerCase()) {
+          is_contains_blocked_skill = true;
+        }
+      });
+    });
 
-  //   if (is_contains_blocked_skill) return false;
+    if (is_contains_blocked_skill) return false;
 
-  //   let matched = false;
-  //   el.jobs.forEach(({ name }) => {
-  //     matched = necessary_skills.includes(name.toLowerCase());
-  //   });
+    let matched = false;
+    el.jobs.forEach(({ name }) => {
+      searchInfo.necessary_skills.forEach((skill) => {
+        if (name.toLowerCase().includes(skill.toLowerCase())) {
+          matched = true;
+        }
+      });
+    });
 
-  //   return matched;
-  // });
+    return matched;
+  });
 
   // price according type
-  // projects = projects.filter((el) => {
-  //   if (el.type === "hourly") {
-  //     return el.budget.minimum >= 5 || el.budget.maximum >= 15;
-  //   } else {
-  //     return el.budget.minimum >= 100 || el.budget.maximum >= 200;
-  //   }
-  // });
+  projects = projects.filter((el) => {
+    if (el.type === "hourly") {
+      return (
+        el.budget.minimum >= searchInfo.price_hourly_min ||
+        el.budget.maximum >= searchInfo.price_hourly_max
+      );
+    } else {
+      return (
+        el.budget.minimum >= searchInfo.price_fix_min ||
+        el.budget.maximum >= searchInfo.price_fix_max
+      );
+    }
+  });
 
-  if (projects.length) {
-    console.log(projects);
-    // projects.forEach((project) => {
-    //   createBid(project);
-    //   notify("Applyed to a job!");
-    // });
-    createBid(projects[0])
-      .then((res) => {
-        console.log(res);
-        notify("Applyed to a job!");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }
+  return projects;
+
+  // if (projects.length) {
+  //   console.log(projects);
+  //   // projects.forEach((project) => {
+  //   //   createBid(project);
+  //   //   notify("Applyed to a job!");
+  //   // });
+  //   createBid(projects[0])
+  //     .then((res) => {
+  //       console.log(res);
+  //       notify("Applyed to a job!");
+  //     })
+  //     .catch((error) => {
+  //       console.error(error);
+  //     });
+  // }
 };
 
 const createBid = async function (project) {

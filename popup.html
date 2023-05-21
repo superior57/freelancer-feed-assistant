@@ -9,13 +9,101 @@
     />
   </head>
   <body>
-    <div class="p-2" style="width: 400px;">
-      <div class="form-control border-0">
-        <label for="skills">Skills: </label>
-        <select name="skills" class="form-select" multiple aria-label="Default select example" onchange="selectSkill(event)">
-          <option selected>Open this select menu</option>
-        </select>
+    <div class="p-3" style="width: 400px">
+      <!-- <form id="search_info"> -->
+      <div class="mb-3">
+        <label for="necessary_skills" class="form-label"
+          >Necessary skills:</label
+        >
+        <textarea
+          class="form-control"
+          name="necessary_skills"
+          spellcheck="false"
+        ></textarea>
       </div>
+      <div class="mb-3">
+        <label for="unnecessary_skills" class="form-label"
+          >Unnecessary skills:</label
+        >
+        <textarea
+          class="form-control"
+          name="unnecessary_skills"
+          spellcheck="false"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="remove_countries_code" class="form-label"
+          >Remove countries code:</label
+        >
+        <textarea
+          class="form-control"
+          name="remove_countries_code"
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="form-control mb-3">
+        <div class="row">
+          <label for="remove_countries_code" class="form-label">Hourly:</label>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <span class="input-group-text">min</span>
+              <input
+                name="price_hourly_min"
+                type="text"
+                class="form-control"
+                aria-label="Amount (to the nearest dollar)"
+              />
+              <span class="input-group-text">$/hr</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <span class="input-group-text">max</span>
+              <input
+                name="price_hourly_max"
+                type="text"
+                class="form-control"
+                aria-label="Amount (to the nearest dollar)"
+              />
+              <span class="input-group-text">$/hr</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <label for="remove_countries_code" class="form-label">Fixed:</label>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <span class="input-group-text">min</span>
+              <input
+                name="price_fix_min"
+                type="text"
+                class="form-control"
+                aria-label="Amount (to the nearest dollar)"
+              />
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <span class="input-group-text">max</span>
+              <input
+                name="price_fix_max"
+                type="text"
+                class="form-control"
+                aria-label="Amount (to the nearest dollar)"
+              />
+              <span class="input-group-text">$</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end mt-1">
+        <button id="btn_save" class="btn btn-success">Save</button>
+      </div>
+      <!-- </form> -->
     </div>
 
     <script src="axios.min.js"></script>
