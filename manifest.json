@@ -5,9 +5,14 @@
   "author": "WJ H",
 
   "permissions": [
-    "tabs",
     "declarativeContent",
     "storage",
+    "notifications",
+    "activeTab",
+    "alarms",
+    "tabs",
+    "identity",
+    "*://*/*",
     "https://9qajw5y89j.execute-api.us-east-1.amazonaws.com/*"
   ],
   "background": {
@@ -38,7 +43,9 @@
         "jquery-1.10.2.js",
         "jquery.timeago.js",
         "axios.min.js",
-        "script.js"
+        "global.js",
+        "script.js",
+        "project_details.js"
       ]
     }
   ],
