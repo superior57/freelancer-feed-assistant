@@ -8,7 +8,7 @@ const getSearchInfo = () =>
   new Promise((resolve) => {
     chrome.storage.sync.get(null, (data) => {
       const searchInfo = {
-        necessary_skills: data.necessary_skills.split(",") || [
+        necessary_skills: data.necessary_skills?.split(",") || [
           "react.js",
           "next.js",
           "angular",
@@ -19,12 +19,12 @@ const getSearchInfo = () =>
           "mui",
           "PHP",
         ],
-        unnecessary_skills: data.unnecessary_skills.split(",") || [
+        unnecessary_skills: data.unnecessary_skills?.split(",") || [
           "wordpress",
           "graphic design",
           "illustrator",
         ],
-        remove_countries_code: data.remove_countries_code.split(",") || [
+        remove_countries_code: data.remove_countries_code?.split(",") || [
           "IN",
           "NG",
           "PK",
