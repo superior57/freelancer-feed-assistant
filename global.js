@@ -95,7 +95,7 @@ const getSearchInfo = () =>
     });
   });
 
-const $Async = (selector, callback, retry = 5) => {
+const $Async = (selector, callback, retry = (1000 / 500) * 60) => {
   if (retry === 0) {
     const error = new Error("Can not load Element");
     throw error;
@@ -110,4 +110,3 @@ const $Async = (selector, callback, retry = 5) => {
 
   callback($el);
 };
-
