@@ -51,11 +51,7 @@ const reload_jobs = function () {
           enterprise_metadata_field_details: true,
           forceShowLocationDetails: false,
           full_description: true,
-          jobs: [
-            3, 9, 13, 17, 20, 51, 69, 77, 95, 116, 137, 237, 247, 305, 323, 335,
-            343, 355, 500, 519, 539, 564, 602, 669, 704, 741, 759, 763, 901,
-            1031, 1051, 1084, 1088, 1092, 1093, 1126, 1325, 1544, 1623, 1684,
-          ],
+          jobs: authUser.jobs.map(({ id }) => id),
           languages: ["de", "en", "es", "fr", "it", "pl", "pt", "ru", "tr"],
           limit: 10,
           new_pools: true,
@@ -343,7 +339,11 @@ const loop_rand = function () {
 const getAuthDetail = function () {
   return new Promise((resolve, reject) => {
     axios
-      .get(`https://www.freelancer.com/api/users/0.1/self/`)
+      .get(`https://www.freelancer.com/api/users/0.1/self/`, {
+        params: {
+          jobs: true,
+        },
+      })
       .then((res) => {
         resolve(res.data.result);
       })
