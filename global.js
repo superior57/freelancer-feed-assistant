@@ -94,3 +94,20 @@ const getSearchInfo = () =>
       resolve(searchInfo);
     });
   });
+
+const $Async = (selector, callback, retry = 5) => {
+  if (retry === 0) {
+    const error = new Error("Can not load Element");
+    throw error;
+  }
+
+  var $el = $(selector);
+  if ($el.length === 0) {
+    retry = retry - 1;
+    setTimeout(() => $Async(selector, callback, retry), 500); // Retry every 500ms
+    return;
+  }
+
+  callback($el);
+};
+

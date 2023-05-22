@@ -1,8 +1,21 @@
+
 $(document).ready(function () {
+  console.log('starting bid...');
   const allPath = document.location.pathname.split("/");
   const lastPath = allPath.pop();
   if (lastPath === "details") {
     const projectPath = [allPath[2], allPath[3]].join("/");
+
+    const $image = $("<img>");
+    $image.attr("src", "//v.fastcdn.co/u/430e104e/57723912-0-Untitled-22.svg");
+    $image.attr("width", "50");
+    $image.attr("height", "50");
+
+    $Async('label[for="descriptionTextArea"]', ($el) => {
+      $el.parent().css("display", "flex");
+      $el.parent().css("align-items", "center");
+      $el.after($image);
+    });
 
     axios
       .get("https://www.freelancer.com/api/projects/0.1/projects", {
@@ -68,8 +81,10 @@ $(document).ready(function () {
         const bid = await createBid(details);
 
         $("#descriptionTextArea").val(bid.message);
+        $image.hide();
       })
       .catch((error) => {
+        $image.hide();
         console.log(error);
       });
   }
