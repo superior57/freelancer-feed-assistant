@@ -12,6 +12,7 @@ $(document).ready(function () {
 
   $("#btn_save").on("click", () => {
     chrome.storage.sync.set({
+      openai_api_key: $('input[name="openai_api_key"]').val(),
       necessary_skills: $('textarea[name="necessary_skills"]').val(),
       unnecessary_skills: $('textarea[name="unnecessary_skills"]').val(),
       remove_countries_code: $('textarea[name="remove_countries_code"]').val(),

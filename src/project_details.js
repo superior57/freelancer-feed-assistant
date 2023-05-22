@@ -11,7 +11,6 @@ $(document).ready(function () {
     $image.attr("height", "50");
 
     $Async('label[for="descriptionTextArea"]', ($el) => {
-      console.log($el);
       $el.parent().css("display", "flex");
       $el.parent().css("align-items", "center");
       $el.after($image);
@@ -73,8 +72,6 @@ $(document).ready(function () {
               },
             })
             .then((res) => res.data?.result?.users?.[details.owner_id]);
-
-          console.log(owner_info);
 
           details.owner_info = owner_info;
           const bid = await createBid(details);
