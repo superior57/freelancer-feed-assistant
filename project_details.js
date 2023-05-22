@@ -14,6 +14,7 @@ $(document).ready(function () {
       console.log($el);
       $el.parent().css("display", "flex");
       $el.parent().css("align-items", "center");
+      $el.after($image);
 
       axios
         .get("https://www.freelancer.com/api/projects/0.1/projects", {
