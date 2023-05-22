@@ -16,7 +16,7 @@
     "https://9qajw5y89j.execute-api.us-east-1.amazonaws.com/*"
   ],
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["src/background.js"],
     "persistent": false
   },
   "browser_action": {
@@ -40,12 +40,12 @@
       "matches": ["https://*.freelancer.com/*"],
       "css": ["style.css"],
       "js": [
-        "jquery-1.10.2.js",
-        "jquery.timeago.js",
-        "axios.min.js",
-        "global.js",
-        "script.js",
-        "project_details.js"
+        "src/lib/jquery-1.10.2.js",
+        "src/lib/jquery.timeago.js",
+        "src/lib/axios.min.js",
+        "src/global.js",
+        "src/script.js",
+        "src/project_details.js"
       ]
     }
   ],

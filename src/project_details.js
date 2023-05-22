@@ -80,6 +80,7 @@ $(document).ready(function () {
           const bid = await createBid(details);
 
           $("#descriptionTextArea").val(bid.message);
+          $("#descriptionTextArea").click();
           $image.hide();
         })
         .catch((error) => {
