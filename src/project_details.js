@@ -89,7 +89,7 @@ $(document).ready(function () {
             $("#bidButton").hide();
             $image.show();
             createBid(details)
-              .then(() => {
+              .then((bid) => {
                 $("#descriptionTextArea").val(bid.message);
                 $("#descriptionTextArea").click();
                 $("#descriptionTextArea").attr(
