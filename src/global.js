@@ -66,6 +66,29 @@ const createBid = async function (project) {
   }
 };
 
+const submitBid = async () => {
+  try {
+    const data = {
+      amount: 140,
+      bidder_id: 69200347,
+      description:
+        "Hello Friends,\n\nI have extensive experience in setting up separate databases for Laravel-based applications. With my expertise in Laravel 8.x and higher, I can easily create and configure a separate database with the required credentials such as hostname/IP, username, and password. \n\nWorking with Virtual Private Server (VPS) hosting environments is my specialization, and I assure you that I can efficiently migrate your WhatsApp API code and database to your desired hosting.\n\nSincerely,\nMihai G.",
+      milestone_percentage: 50,
+      period: 7,
+      project_id: 36659232,
+    };
+
+    const response = await axios.post(
+      `https://www.freelancer.com/api/projects/0.1/bids/?compact=true&new_errors=true&new_pools=true`,
+      data
+    );
+
+    return response.data;
+  } catch (error) {
+    return Promise.reject(error);
+  }
+};
+
 const getSearchInfo = () =>
   new Promise((resolve) => {
     chrome.storage.sync.get(null, (data) => {

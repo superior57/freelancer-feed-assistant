@@ -7,7 +7,7 @@ let searchInfo = {};
 $(document).ready(function () {
   $(".search-result-input-sort").empty();
   $(".search-result-input-sort").append(`
-    <button class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 50px;' id='refresh_btn'>New Feed</button>
+    <button class='btn btn-success' style='margin-left: 27px;border-radius: 50px;' id='refresh_btn'>New Feed</button>
   `);
 
   $(".cdk-overlay-pane").css("left", "20px");
