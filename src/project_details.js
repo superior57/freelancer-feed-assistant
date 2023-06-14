@@ -19,8 +19,6 @@ $(document).ready(function () {
     if (document.location.pathname.match(/^(\/projects\/)([a-z]){2}/)) {
       let projectPath = [allPath[2], allPath[3]].join("/");
       console.log("getting project info...");
-      $("#bidButton").hide();
-      $image.show();
 
       axios
         .get("https://www.freelancer.com/api/projects/0.1/projects", {
@@ -88,6 +86,8 @@ $(document).ready(function () {
           });
 
           $("#bidButton").on("click", () => {
+            $("#bidButton").hide();
+            $image.show();
             createBid(details)
               .then(() => {
                 $("#descriptionTextArea").val(bid.message);
