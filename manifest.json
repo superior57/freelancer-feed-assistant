@@ -38,7 +38,7 @@
   "content_scripts": [
     {
       "matches": ["https://*.freelancer.com/*"],
-      "css": ["style.css", "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"],
+      "css": ["style.css"],
       "js": [
         "src/lib/jquery-1.10.2.js",
         "src/lib/jquery.timeago.js",
