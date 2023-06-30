@@ -81,7 +81,7 @@ $(document).ready(function () {
           details.owner_info = owner_info;
           const clientName = owner_info.public_name;
 
-          $Async("app-employer-info fl-card-header-title", function ($el) {
+          $Async("app-employer-info .CardBody h3", function ($el) {
             $el.text(`${$el.text()}: ${clientName}`);
           });
 
