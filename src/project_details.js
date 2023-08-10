@@ -81,8 +81,8 @@ $(document).ready(function () {
           details.owner_info = owner_info;
           const clientName = owner_info.public_name;
 
-          $Async('label[for="descriptionTextArea"]', function ($el) {
-            $el.append(`<span style="color: #e60278">${clientName}</span>`);
+          $Async('h3:contains("Skills Required")', function ($el) {
+            $el.before(`<h3 style="color: #e60278; margin-bottom: 10px; text-align: right; font-weight: bold">${clientName}</h3>`);
           });
 
           $("#bidButton").on("click", () => {
