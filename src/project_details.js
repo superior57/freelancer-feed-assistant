@@ -82,7 +82,7 @@ $(document).ready(function () {
           const clientName = owner_info.public_name;
 
           $Async('label[for="descriptionTextArea"]', function ($el) {
-            $el.text(`${$el.text()}: ${clientName}`);
+            $el.append(`<span style="color: #e60278">${clientName}</span>`);
           });
 
           $("#bidButton").on("click", () => {
