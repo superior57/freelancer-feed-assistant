@@ -37,14 +37,23 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://*.freelancer.com/*"],
+      "matches": ["https://*.freelancer.com/search/projects/*"],
       "css": ["style.css"],
       "js": [
         "src/lib/jquery-1.10.2.js",
         "src/lib/jquery.timeago.js",
         "src/lib/axios.min.js",
         "src/global.js",
-        "src/script.js",
+        "src/script.js"
+      ]
+    },
+    {
+      "matches": ["https://*.freelancer.com/projects/*"],
+      "js": [
+        "src/lib/jquery-1.10.2.js",
+        "src/lib/jquery.timeago.js",
+        "src/lib/axios.min.js",
+        "src/global.js",
         "src/project_details.js"
       ]
     }
