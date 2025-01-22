@@ -74,7 +74,7 @@ $(document).ready(function () {
   }
 
 
-  $Async(".BidHeader > fl-bit", function ($el) {
+  $Async(".BidHeader", function ($el) {
     $el.empty();
     $el.append(
       `<button id="bidButton" class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 50px;'>Write my bid</button>`
