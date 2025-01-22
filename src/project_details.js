@@ -75,9 +75,9 @@ $(document).ready(function () {
 
 
   $Async(".BidHeader", function ($el) {
-    $el.empty();
+    // $el.empty();
     $el.append(
-      `<button id="bidButton" class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 50px;'>Write my bid</button>`
+      `<button id="bidButton" class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 5px;'>Write my bid</button>`
     );
 
     const $image = $("<img>");
