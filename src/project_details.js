@@ -79,6 +79,9 @@ $(document).ready(function () {
             .then((res) => res.data?.result?.users?.[details.owner_id]);
 
           details.owner_info = owner_info;
+
+          console.log(owner_info);
+          
           const clientName = owner_info.public_name;
 
           $Async('h3:contains("Skills Required")', function ($el) {
