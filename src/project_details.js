@@ -74,40 +74,40 @@ $(document).ready(function () {
   }
 
 
-  $Async(".BidHeader", function ($el) {
-    // $el.empty();
-    $el.append(
-      `<button id="bidButton" class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 5px;'>Write my bid</button>`
-    );
+  // $Async(".BidHeader", function ($el) {
+  //   // $el.empty();
+  //   $el.append(
+  //     `<button id="bidButton" class='btn btn-success btn-feed-assistant-reload' style='margin-left: 27px;border-radius: 5px;'>Write my bid</button>`
+  //   );
 
-    const $image = $("<img>");
-    $image.attr("src", "//v.fastcdn.co/u/430e104e/57723912-0-Untitled-22.svg");
-    $image.attr("width", "50");
-    $image.attr("height", "50");
-    $image.hide();
+  //   const $image = $("<img>");
+  //   $image.attr("src", "//v.fastcdn.co/u/430e104e/57723912-0-Untitled-22.svg");
+  //   $image.attr("width", "50");
+  //   $image.attr("height", "50");
+  //   $image.hide();
 
-    $el.append($image);
+  //   $el.append($image);
 
-    $("#bidButton").on("click", () => {
-      $("#bidButton").hide();
-      $image.show();
-      createBid(details)
-        .then((bid) => {
-          $("#descriptionTextArea").val(bid.message);
-          $("#descriptionTextArea").click();
-          $("#descriptionTextArea").attr(
-            "class",
-            "TextArea ng-tns-c243-47 ng-trigger ng-trigger-shakeAnimation ng-touched ng-dirty ng-valid"
-          );
+  //   $("#bidButton").on("click", () => {
+  //     $("#bidButton").hide();
+  //     $image.show();
+  //     createBid(details)
+  //       .then((bid) => {
+  //         $("#descriptionTextArea").val(bid.message);
+  //         $("#descriptionTextArea").click();
+  //         $("#descriptionTextArea").attr(
+  //           "class",
+  //           "TextArea ng-tns-c243-47 ng-trigger ng-trigger-shakeAnimation ng-touched ng-dirty ng-valid"
+  //         );
 
-          $("#bidButton").show();
-          $image.hide();
-        })
-        .catch((error) => {
-          $("#bidButton").show();
-          $image.hide();
-          console.log(error);
-        });
-    });
-  });
+  //         $("#bidButton").show();
+  //         $image.hide();
+  //       })
+  //       .catch((error) => {
+  //         $("#bidButton").show();
+  //         $image.hide();
+  //         console.log(error);
+  //       });
+  //   });
+  // });
 });
